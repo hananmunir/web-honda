@@ -10,14 +10,12 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className='h-full '>
       <div className='relative w-screen'>
         <span className='fixed text-6xl top-10 right-10 text-white'>Honda</span>
-        <Header />
         <ScrollMenu />
       </div>
-      <Footer />
-    </>
+    </div>
   );
 }
 
