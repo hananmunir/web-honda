@@ -5,16 +5,22 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ScrollMenu from "./components/ScrollMenu";
+import Hondo from "./components/shared/Hondo";
+import Reel from "./components/sections/Reel";
+import Video from "./components/sections/Video";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className='h-full '>
-      <div className='relative w-screen'>
+    <div className="h-full ">
+      {/* <div className='relative w-screen'>
         <span className='fixed text-6xl top-10 right-10 text-white'>Honda</span>
         <ScrollMenu />
-      </div>
+      </div> */}
+      <Hondo />
+      {/* <Reel /> */}
+      <Video />
     </div>
   );
 }
