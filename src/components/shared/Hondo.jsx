@@ -37,6 +37,10 @@ export default function Hondo() {
           isSidebarOpen ? " w-1/5 block" : "hidden"
         } transition-all duration-300 bg-[#252525] text-white flex flex-col justify-around py-2 px-10 items-start text-left overflow-hidden`}
       >
+        <div className="text-2xl ">
+          <span className="hover:text-purple-500 cursor-pointer">ES</span> /{" "}
+          <span className="hover:text-purple-500 cursor-pointer">EN</span>
+        </div>
         <div className="text-2xl hover:text-orange-500 cursor-pointer">
           Producción Audiovisual
         </div>

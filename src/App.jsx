@@ -8,6 +8,7 @@ import ScrollMenu from "./components/ScrollMenu";
 import Hondo from "./components/shared/Hondo";
 import Reel from "./components/sections/Reel";
 import Video from "./components/sections/Video";
+import Portfolio from "./components/sections/Portfolio";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,7 +21,8 @@ function App() {
       </div> */}
       <Hondo />
       {/* <Reel /> */}
-      <Video />
+      {/* <Video /> */}
+      <Portfolio />
     </div>
   );
 }
