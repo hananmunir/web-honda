@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className='px-9 py-12 text-xl text-white  bg-[#1d1d1b] w-screen grid grid-cols-12'>
+    <div className='px-9 relative !z-20 py-12 text-xl text-white  bg-[#1d1d1b] w-screen grid grid-cols-12'>
       <div className=' col-span-4 gap-2  flex flex-col items-start '>
         <img src='images/logo.png' alt='logo' className='h-28 object-contain' />
         <span className='text-white text-2xl'>
