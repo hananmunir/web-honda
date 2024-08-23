@@ -12,7 +12,7 @@ export default function Video({ count }) {
     >
       <img src={"/images/banner.png"} className='w-full h-[100vh]' />
       {/* Main content section */}
-      <div className='bg-white h-screen w-3/5 p-10 overflow-auto text-right flex flex-col items-end self-end gap-2'>
+      <div className='bg-white  w-3/5 p-10 overflow-auto text-right flex flex-col items-end self-end gap-2'>
         <h1 className='text-purple-600 text-6xl w-full'>
           Llevamos las ideas de <br /> nuestros clientes al formato <br />
           audiovisual adecuado

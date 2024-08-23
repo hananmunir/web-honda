@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -20,14 +20,90 @@ import { twMerge } from "tailwind-merge";
 function App() {
   const [count, setCount] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const containerRef = useRef(null);
+  const footerRef = useRef(null);
+  const headerRef = useRef(null);
   console.log(count);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("intersecting");
+            window.scrollTo(0, window.screen.height);
+            setCount((prev) => {
+              if (prev === 7) {
+                return 7;
+              } else {
+                return prev + 1;
+              }
+            });
+
+            // Section is in view, update the count
+            //  setCount(index);
+          }
+        });
+      },
+      {
+        root: null, // Uses the viewport as the root
+        rootMargin: "0px",
+        threshold: 0.5, // 50% of the section must be visible to trigger
+      }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("intersecting");
+            if (count === 0) return;
+            window.scrollTo(0, window.screen.height);
+            setCount((prev) => {
+              if (prev === 0) {
+                return 0;
+              } else {
+                return prev - 1;
+              }
+            });
+
+            // Section is in view, update the count
+            //  setCount(index);
+          }
+        });
+      },
+      {
+        root: null, // Uses the viewport as the root
+        rootMargin: "0px",
+        threshold: 0.5, // 50% of the section must be visible to trigger
+      }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, [count]);
+  // console.log(count);
+
   return (
     <div className='h-full relative '>
-      {/* <div className='relative w-screen'>
-        <span className='fixed text-6xl top-10 right-10 text-white'>Honda</span>
-        <ScrollMenu />
-      </div> */}
-
       <div
         className={twMerge(
           "fixed z-30 top-0 transition-all duration-300 ease-in-out right-0 translate-x-[20vw]  h-screen flex gap-5",
@@ -68,11 +144,13 @@ function App() {
 
       {/* <CircleX /> */}
 
-      <Header />
+      <Header headerRef={headerRef} />
 
-      <div className='relative h-full !z-1'>
+      <div
+        ref={containerRef}
+        className='relative h-full !z-1 section-container'
+      >
         <ScrollMenu count={count} setCount={setCount} />
-
         <Reel count={count} />
         <Video count={count} />
         <Foto count={count} />
@@ -87,7 +165,10 @@ function App() {
       </div>
 
       {/* <Hondo /> */}
-      <div className='text-violet-700 text-start p-5 z-20 relative bg-white  flex flex-col justify-end text-[2rem] leading-[50px] '>
+      <div
+        ref={footerRef}
+        className='text-violet-700 text-start p-5 z-20 relative bg-white  flex flex-col justify-end text-[2rem] leading-[50px] '
+      >
         +34662122660 <br /> Carrer de l’Esglesia 4-6, Barcelona.
         <br />
         hola@hondostudio.com
