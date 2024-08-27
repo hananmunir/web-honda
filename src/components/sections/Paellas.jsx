@@ -6,7 +6,8 @@ export default function Paellas({ count }) {
     <div
       className={twMerge(
         "h-screen overflow-y-hidden hide-scrollbar  w-screen  flex flex-col   absolute pointer-events-none transition-all ease-in-out duration-200 opacity-0 top-0 left-0",
-        count === 6 && "relative opacity-100 pointer-events-auto top-0"
+        count === 6 &&
+          "relative opacity-100 pointer-events-auto top-0 transition-none"
       )}
     >
       <img src={"/images/banner.png"} className='w-full h-[60vh]' />

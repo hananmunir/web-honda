@@ -6,7 +6,8 @@ export default function Reel({ count }) {
     <div
       className={twMerge(
         "h-screen overflow-y-hidden hide-scrollbar top-0 left-0 absolute pointer-events-none transition-all ease-in-out duration-200 opacity-0 w-screen flex flex-col justify-end ",
-        count === 0 && "relative opacity-100 pointer-events-auto top-0"
+        count === 0 &&
+          "relative opacity-100 pointer-events-auto top-0 transition-none"
       )}
     >
       <img src={"/images/banner.png"} className='w-full h-[60vh] object-fill' />

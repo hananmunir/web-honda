@@ -7,7 +7,8 @@ export default function Foto({ count }) {
     <div
       className={twMerge(
         "h-screen overflow-y-hidden hide-scrollbar  w-screen top-0 left-0  flex flex-col   absolute pointer-events-none transition-all ease-in-out duration-200 opacity-0",
-        count === 2 && "relative opacity-100 pointer-events-auto top-0"
+        count === 2 &&
+          "relative opacity-100 pointer-events-auto top-0 transition-none"
       )}
     >
       <img src={"/images/banner.png"} className='w-full h-[60vh]' />
