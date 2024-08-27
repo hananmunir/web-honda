@@ -5,13 +5,13 @@ export default function Paellas({ count }) {
   return (
     <div
       className={twMerge(
-        "h-full w-screen  flex flex-col   absolute pointer-events-none transition-all ease-in-out duration-500 opacity-0 top-0 left-0",
+        "h-screen overflow-y-hidden hide-scrollbar  w-screen  flex flex-col   absolute pointer-events-none transition-all ease-in-out duration-200 opacity-0 top-0 left-0",
         count === 6 && "relative opacity-100 pointer-events-auto top-0"
       )}
     >
-      <img src={"/images/banner.png"} className='w-full h-[100vh]' />
+      <img src={"/images/banner.png"} className='w-full h-[60vh]' />
       {/* Main content section */}
-      <div className='bg-white h-screen w-2/4 p-4 overflow-auto text-right flex flex-col self-end gap-2'>
+      <div className='bg-white h-full w-2/4 p-4 text-right flex flex-col self-end gap-2'>
         <h1 className='text-purple-600 text-6xl'>
           Podemos hacer hasta una paella ;
         </h1>

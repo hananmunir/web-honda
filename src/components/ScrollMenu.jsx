@@ -14,8 +14,8 @@ const items = [
 
 const ScrollMenu = ({ count, setCount }) => {
   return (
-    <div className='absolute  top-[80vh] z-10 left-5 h-[50px]  overflow'>
-      <div className='absolute  h-48 -top-6 w-full flex flex-col justify-between items-center'>
+    <div className='absolute  top-[40vh] z-10 left-5 h-[50px]  overflow'>
+      {/* <div className='absolute  h-48 -top-6 w-full flex flex-col justify-between items-center'>
         <ChevronUp
           onClick={() => {
             if (count === items.length) return;
@@ -38,7 +38,7 @@ const ScrollMenu = ({ count, setCount }) => {
           )}
           size={60}
         />
-      </div>
+      </div> */}
 
       <div
         style={{

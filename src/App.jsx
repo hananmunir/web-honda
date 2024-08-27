@@ -31,7 +31,8 @@ function App() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             console.log("intersecting");
-            window.scrollTo(0, window.screen.height);
+            if (count === 7) return;
+            window.scrollTo(0, window.screen.height * 0.8);
             setCount((prev) => {
               if (prev === 7) {
                 return 7;
@@ -48,7 +49,7 @@ function App() {
       {
         root: null, // Uses the viewport as the root
         rootMargin: "0px",
-        threshold: 0.5, // 50% of the section must be visible to trigger
+        threshold: 0.8, // 50% of the section must be visible to trigger
       }
     );
 
@@ -61,7 +62,7 @@ function App() {
         observer.unobserve(footerRef.current);
       }
     };
-  }, []);
+  }, [count]);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -69,7 +70,7 @@ function App() {
           if (entry.isIntersecting) {
             console.log("intersecting");
             if (count === 0) return;
-            window.scrollTo(0, window.screen.height);
+            //  window.scrollTo(0, window.screen.height);
             setCount((prev) => {
               if (prev === 0) {
                 return 0;
@@ -103,7 +104,7 @@ function App() {
   // console.log(count);
 
   return (
-    <div className='h-full relative '>
+    <div className='h-full relative hide-scrollbar  overf'>
       <div
         className={twMerge(
           "fixed z-30 top-0 transition-all duration-300 ease-in-out right-0 translate-x-[20vw]  h-screen flex gap-5",
@@ -148,7 +149,7 @@ function App() {
 
       <div
         ref={containerRef}
-        className='relative h-full !z-1 section-container'
+        className='relative h-screen hide-scrollbar   !z-1 section-container'
       >
         <ScrollMenu count={count} setCount={setCount} />
         <Reel count={count} />

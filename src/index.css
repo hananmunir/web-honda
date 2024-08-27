@@ -33,3 +33,13 @@
   background-color: #ccc;
   margin-bottom: 16px;
 }
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+
+  /* IE 10+ */
+
+
+}

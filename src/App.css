@@ -24,3 +24,20 @@
 .scroll-menu {
   animation: scroll 10s linear infinite;
 } */
+
+.container {
+  -webkit-overflow-scrolling: auto;
+  /* Default is 'touch' which enables momentum scrolling */
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  /* Prevent scroll chaining */
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  /* Prevent scroll chaining */
+  scroll-behavior: smooth;
+  /* Optional: for smooth scroll behavior */
+  -webkit-overflow-scrolling: touch;
+  /* For iOS devices */
+  touch-action: pan-y;
+  /* Only vertical scrolling */
+}

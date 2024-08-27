@@ -5,14 +5,11 @@ export default function Reel({ count }) {
   return (
     <div
       className={twMerge(
-        "h-full top-0 left-0 absolute pointer-events-none transition-all ease-in-out duration-500 opacity-0 w-screen flex flex-col justify-end ",
+        "h-screen overflow-y-hidden hide-scrollbar top-0 left-0 absolute pointer-events-none transition-all ease-in-out duration-200 opacity-0 w-screen flex flex-col justify-end ",
         count === 0 && "relative opacity-100 pointer-events-auto top-0"
       )}
     >
-      <img
-        src={"/images/banner.png"}
-        className='w-full h-[100vh] object-fill'
-      />
+      <img src={"/images/banner.png"} className='w-full h-[60vh] object-fill' />
       <div className='bg-white ms-auto w-2/4 p-10 overflow-auto text-right flex flex-col items-end gap-4'>
         <h1 className='text-purple-600 text-6xl'>
           Somos una <br />

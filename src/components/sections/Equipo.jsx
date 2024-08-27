@@ -5,13 +5,13 @@ export default function Equipo({ count }) {
   return (
     <div
       className={twMerge(
-        "h-full w-screen top-0 left-0 flex flex-col   absolute pointer-events-none transition-all ease-in-out duration-500 opacity-0",
+        "h-screen overflow-y-hidden hide-scrollbar  w-screen top-0 left-0 flex flex-col   absolute pointer-events-none transition-all ease-in-out duration-200 opacity-0",
         count === 5 && "relative opacity-100 pointer-events-auto top-0"
       )}
     >
-      <img src={"/images/banner.png"} className='w-full h-[100vh]' />
+      <img src={"/images/banner.png"} className='w-full h-[60vh]' />
       {/* Main content section */}
-      <div className='bg-white  w-2/4 p-4 overflow-auto text-right flex flex-col self-end gap-2'>
+      <div className='bg-white  w-2/4 p-4 h-full text-right flex flex-col self-end gap-2'>
         <h1 className='text-purple-600 text-6xl'>
           Somos un equipo multidisciplinar
         </h1>
