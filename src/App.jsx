@@ -16,6 +16,7 @@ import Paellas from "./components/sections/Paellas";
 import Foto from "./components/sections/Foto";
 import { PlusCircle, CircleX } from "lucide-react";
 import { twMerge } from "tailwind-merge";
+import Wrapper from "./components/sections/Wrapper";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -63,57 +64,57 @@ function App() {
       }
     };
   }, [count]);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            console.log("intersecting");
-            if (count === 0) return;
-            //  window.scrollTo(0, window.screen.height);
-            setCount((prev) => {
-              if (prev === 0) {
-                return 0;
-              } else {
-                return prev - 1;
-              }
-            });
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           console.log("intersecting");
+  //           if (count === 0) return;
+  //           //  window.scrollTo(0, window.screen.height);
+  //           setCount((prev) => {
+  //             if (prev === 0) {
+  //               return 0;
+  //             } else {
+  //               return prev - 1;
+  //             }
+  //           });
 
-            // Section is in view, update the count
-            //  setCount(index);
-          }
-        });
-      },
-      {
-        root: null, // Uses the viewport as the root
-        rootMargin: "0px",
-        threshold: 0.5, // 50% of the section must be visible to trigger
-      }
-    );
+  //           // Section is in view, update the count
+  //           //  setCount(index);
+  //         }
+  //       });
+  //     },
+  //     {
+  //       root: null, // Uses the viewport as the root
+  //       rootMargin: "0px",
+  //       threshold: 0.5, // 50% of the section must be visible to trigger
+  //     }
+  //   );
 
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
+  //   if (headerRef.current) {
+  //     observer.observe(headerRef.current);
+  //   }
 
-    return () => {
-      if (headerRef.current) {
-        observer.unobserve(headerRef.current);
-      }
-    };
-  }, [count]);
+  //   return () => {
+  //     if (headerRef.current) {
+  //       observer.unobserve(headerRef.current);
+  //     }
+  //   };
+  // }, [count]);
   // console.log(count);
 
   return (
-    <div className='h-full relative hide-scrollbar  overf'>
+    <div className='h-screen relative hide-scrollbar  overflow-y-scroll'>
       <div
         className={twMerge(
-          "fixed z-30 top-0 transition-all duration-300 ease-in-out right-0 translate-x-[20vw]  h-screen flex gap-5",
+          "fixed z-30 top-0 transition-all duration-300 ease-in-out right-0 translate-x-[20vw]  h-[60vh] flex gap-5",
           menuOpen && "translate-x-0"
         )}
       >
-        <div className='flex flex-col items-end h-full py-5 justify-between '>
+        <div className='flex flex-col items-end h-full pb-7 justify-between '>
           {" "}
-          <span className=' text-white  z-[30] text-[4rem]  '> Hondo</span>
+          <span className=' text-white  z-[30] text-[4rem]   '> Hondo</span>
           {menuOpen ? (
             <CircleX
               onClick={() => setMenuOpen(false)}
@@ -145,25 +146,40 @@ function App() {
 
       {/* <CircleX /> */}
 
-      <Header headerRef={headerRef} />
+      {/* <Header headerRef={headerRef} /> */}
 
-      <div
-        ref={containerRef}
-        className='relative h-screen hide-scrollbar   !z-1 section-container'
-      >
-        <ScrollMenu count={count} setCount={setCount} />
-        <Reel count={count} />
-        <Video count={count} />
-        <Foto count={count} />
-        <Diseno count={count} />
-        <Portfolio count={count} />
-        <Equipo count={count} />
-        <Paellas count={count} />
-        <Contact count={count} />
-        {/* 
+      <img
+        src={"/images/banner.png"}
+        className='w-full h-[60vh] sticky top-0 z-[10] object-fill'
+      />
+      <ScrollMenu count={count} setCount={setCount} />
+      <Wrapper count={0} setCount={setCount}>
+        <Reel />
+      </Wrapper>
+      <Wrapper count={1} setCount={setCount}>
+        <Video />
+      </Wrapper>
+      <Wrapper count={2} setCount={setCount}>
+        <Foto />
+      </Wrapper>
+      <Wrapper count={3} setCount={setCount}>
+        <Diseno />
+      </Wrapper>
+      <Wrapper count={4} setCount={setCount}>
+        <Portfolio />
+      </Wrapper>
+      <Wrapper count={5} setCount={setCount}>
+        <Equipo />
+      </Wrapper>
+      <Wrapper count={6} setCount={setCount}>
+        <Paellas />
+      </Wrapper>
+      <Wrapper count={7} setCount={setCount}>
+        <Contact />
+      </Wrapper>
+      {/* 
         
         */}
-      </div>
 
       {/* <Hondo /> */}
       <div
