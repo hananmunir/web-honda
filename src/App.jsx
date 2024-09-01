@@ -14,105 +14,33 @@ import Contact from "./components/sections/Contact";
 import Diseno from "./components/sections/Diseno";
 import Paellas from "./components/sections/Paellas";
 import Foto from "./components/sections/Foto";
-import { PlusCircle, CircleX } from "lucide-react";
+import { PlusCircle, CircleX, ChevronDown, ChevronRight } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import Wrapper from "./components/sections/Wrapper";
 
 function App() {
   const [count, setCount] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
   const containerRef = useRef(null);
   const footerRef = useRef(null);
   const headerRef = useRef(null);
   console.log(count);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            console.log("intersecting");
-            if (count === 7) return;
-            window.scrollTo(0, window.screen.height * 0.8);
-            setCount((prev) => {
-              if (prev === 7) {
-                return 7;
-              } else {
-                return prev + 1;
-              }
-            });
-
-            // Section is in view, update the count
-            //  setCount(index);
-          }
-        });
-      },
-      {
-        root: null, // Uses the viewport as the root
-        rootMargin: "0px",
-        threshold: 0.8, // 50% of the section must be visible to trigger
-      }
-    );
-
-    if (footerRef.current) {
-      observer.observe(footerRef.current);
-    }
-
-    return () => {
-      if (footerRef.current) {
-        observer.unobserve(footerRef.current);
-      }
-    };
-  }, [count]);
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           console.log("intersecting");
-  //           if (count === 0) return;
-  //           //  window.scrollTo(0, window.screen.height);
-  //           setCount((prev) => {
-  //             if (prev === 0) {
-  //               return 0;
-  //             } else {
-  //               return prev - 1;
-  //             }
-  //           });
-
-  //           // Section is in view, update the count
-  //           //  setCount(index);
-  //         }
-  //       });
-  //     },
-  //     {
-  //       root: null, // Uses the viewport as the root
-  //       rootMargin: "0px",
-  //       threshold: 0.5, // 50% of the section must be visible to trigger
-  //     }
-  //   );
-
-  //   if (headerRef.current) {
-  //     observer.observe(headerRef.current);
-  //   }
-
-  //   return () => {
-  //     if (headerRef.current) {
-  //       observer.unobserve(headerRef.current);
-  //     }
-  //   };
-  // }, [count]);
-  // console.log(count);
+  const handleFocusContainer = (name) => {
+    const element = document.querySelector(`.${name}`);
+    element.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className='h-screen relative hide-scrollbar  overflow-y-scroll'>
       <div
         className={twMerge(
-          "fixed z-30 top-0 transition-all duration-300 ease-in-out right-0 translate-x-[20vw]  h-[60vh] flex gap-5",
+          "fixed z-30 top-0 transition-all duration-300 ease-in-out right-0 translate-x-[20vw]  h-[30vh] flex gap-5",
           menuOpen && "translate-x-0"
         )}
       >
-        <div className='flex flex-col items-end h-full pb-7 justify-between '>
+        <div className='flex flex-col items-end h-full pb-4 justify-between '>
           {" "}
           <span className=' text-white  z-[30] text-[4rem]   '> Hondo</span>
           {menuOpen ? (
@@ -133,10 +61,77 @@ function App() {
             />
           )}
         </div>
-        <div className=' p-10 text-left py-20 w-[20vw] flex flex-col  justify-around bg-[#1d1d1b] text-white text-[2rem] font-light'>
-          <span className='text-[#ff0000] cursor-pointer'>
-            Producción Audiovisual
-          </span>
+        <div className=' p-10 z-20 h-screen text-left py-20 w-[20vw] flex flex-col  justify-around bg-[#1d1d1b] text-white text-2xl font-light'>
+          <div className=' flex flex-col gap-2'>
+            <div className='flex gap-2 items-center'>
+              <span className='text-[#ff0000] cursor-pointer'>Home</span>
+
+              <ChevronDown
+                className={twMerge(
+                  "cursor-pointer mt-[6px] -rotate-90",
+                  subMenuOpen && "rotate-0"
+                )}
+                onClick={() => setSubMenuOpen(!subMenuOpen)}
+                size={20}
+              />
+            </div>
+            <div
+              className={twMerge(
+                "flex flex-col gap-2 text-xl h-0 opacity-0  ms-10 pointer-events-none transition-all duration-300 ease-in-out",
+                subMenuOpen && "h-full opacity-70 pointer-events-auto"
+              )}
+            >
+              <span
+                className='cursor-pointer'
+                onClick={() => handleFocusContainer("reel")}
+              >
+                Reel
+              </span>
+              <span
+                className='cursor-pointer'
+                onClick={() => handleFocusContainer("video")}
+              >
+                Video
+              </span>
+              <span
+                className='cursor-pointer'
+                onClick={() => handleFocusContainer("foto")}
+              >
+                Foto
+              </span>
+              <span
+                className='cursor-pointer'
+                onClick={() => handleFocusContainer("diseno")}
+              >
+                Diseño
+              </span>
+              <span
+                className='cursor-pointer'
+                onClick={() => handleFocusContainer("portfolio")}
+              >
+                Portfolio
+              </span>
+              <span
+                className='cursor-pointer'
+                onClick={() => handleFocusContainer("equipo")}
+              >
+                Equipo
+              </span>
+              <span
+                className='cursor-pointer'
+                onClick={() => handleFocusContainer("paellas")}
+              >
+                Paellas
+              </span>
+              <span
+                className='cursor-pointer'
+                onClick={() => handleFocusContainer("contact")}
+              >
+                Contact
+              </span>
+            </div>
+          </div>
+          <span className='cursor-pointer'>Producción Audiovisual</span>
           <span className='cursor-pointer'>Educación y Cultura</span>
           <span className='cursor-pointer'>Agencia Creativa </span>
           <span className='cursor-pointer'>Eventos</span>
@@ -150,31 +145,31 @@ function App() {
 
       <img
         src={"/images/banner.png"}
-        className='w-full h-[60vh] sticky top-0 z-[10] object-fill'
+        className='w-full h-[30vh] sticky top-0 z-[10] object-fill'
       />
       <ScrollMenu count={count} setCount={setCount} />
-      <Wrapper count={0} setCount={setCount}>
+      <Wrapper className={"reel"} count={0} setCount={setCount}>
         <Reel />
       </Wrapper>
-      <Wrapper count={1} setCount={setCount}>
+      <Wrapper count={1} setCount={setCount} className={"video"}>
         <Video />
       </Wrapper>
-      <Wrapper count={2} setCount={setCount}>
+      <Wrapper count={2} setCount={setCount} className={"foto"}>
         <Foto />
       </Wrapper>
-      <Wrapper count={3} setCount={setCount}>
+      <Wrapper count={3} setCount={setCount} className={"diseno"}>
         <Diseno />
       </Wrapper>
-      <Wrapper count={4} setCount={setCount}>
+      <Wrapper count={4} setCount={setCount} className={"portfolio"}>
         <Portfolio />
       </Wrapper>
-      <Wrapper count={5} setCount={setCount}>
+      <Wrapper count={5} setCount={setCount} className={"equipo"}>
         <Equipo />
       </Wrapper>
-      <Wrapper count={6} setCount={setCount}>
+      <Wrapper count={6} setCount={setCount} className={"paellas"}>
         <Paellas />
       </Wrapper>
-      <Wrapper count={7} setCount={setCount}>
+      <Wrapper count={7} setCount={setCount} className={"contact"}>
         <Contact />
       </Wrapper>
       {/* 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-export default function Wrapper({ children, count, setCount }) {
+export default function Wrapper({ children, count, setCount, className }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Wrapper({ children, count, setCount }) {
         });
       },
       {
-        threshold: 0.2,
+        threshold: 0.3,
       }
     );
 
@@ -29,5 +29,9 @@ export default function Wrapper({ children, count, setCount }) {
       }
     };
   }, []);
-  return <div ref={containerRef}>{children}</div>;
+  return (
+    <div ref={containerRef} className={className}>
+      {children}
+    </div>
+  );
 }

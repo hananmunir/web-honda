@@ -2,10 +2,9 @@ import React, { useEffect, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 
 export default function Reel({ count }) {
-
   return (
     <div
-      className={twMerge("h-full border w-screen flex flex-col justify-end ")}
+      className={twMerge("h-full  pb-12 w-screen flex flex-col justify-end ")}
     >
       <div className='bg-white ms-auto w-2/4 p-10 text-right flex flex-col items-end gap-4'>
         <h1 className='text-purple-600 text-6xl'>

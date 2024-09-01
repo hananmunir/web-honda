@@ -14,7 +14,7 @@ const items = [
 
 const ScrollMenu = ({ count, setCount }) => {
   return (
-    <div className='fixed  top-[42vh] z-10 left-5 '>
+    <div className='fixed  top-[17vh] z-10 left-5 '>
       {/* <div className='absolute  h-48 -top-6 w-full flex flex-col justify-between items-center'>
         <ChevronUp
           onClick={() => {
@@ -44,15 +44,15 @@ const ScrollMenu = ({ count, setCount }) => {
         style={{
           transform: `translateY(calc(-${count * 12.25}%)`,
         }}
-        className='scroll-menu relative transition-all duration-300 ease-in-out flex flex-col items-center text-black text-[5rem] font-semibold'
+        className='scroll-menu relative leading-[95px] transition-all duration-300 ease-in-out flex flex-col items-center text-black text-[5rem] font-normal'
       >
         {/* Menu items */}
         {items.map((item, index) => (
           <span
             key={index}
             className={twMerge(
-              "py-1  ",
-              count === index && " text-[#ff0000] mb-5 opacity-100"
+              "   ",
+              count === index && " text-[#ff0000] opacity-100"
             )}
           >
             {item}
