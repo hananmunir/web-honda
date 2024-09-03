@@ -5,6 +5,7 @@ const items = [
   "Reel",
   "Video",
   "Foto",
+  "Gráfico",
   "Diseno",
   "Portfolio",
   "Equipo",

@@ -13,6 +13,7 @@ import Equipo from "./components/sections/Equipo";
 import Contact from "./components/sections/Contact";
 import Diseno from "./components/sections/Diseno";
 import Paellas from "./components/sections/Paellas";
+import Grafico from "./components/sections/Grafico";
 import Foto from "./components/sections/Foto";
 import Production from "./components/sections/Production";
 import { PlusCircle, CircleX, ChevronDown, ChevronRight } from "lucide-react";
@@ -20,6 +21,18 @@ import { twMerge } from "tailwind-merge";
 import Wrapper from "./components/sections/Wrapper";
 
 function App() {
+  const images = [
+    "/images/banner.png",
+    "/images/banner.png",
+    "/images/banner.png",
+    "/images/graficobanner.jpg",
+    "/images/banner.png",
+    "/images/portfoliobanner.jpg",
+    "/images/equipobanner.jpg",
+    "/images/paellasbanner.jpg",
+    "/images/banner.png",
+    "/images/banner.png",
+  ];
   const [count, setCount] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
@@ -102,6 +115,12 @@ function App() {
               </span>
               <span
                 className="cursor-pointer"
+                onClick={() => handleFocusContainer("grafico")}
+              >
+                Grafico
+              </span>
+              <span
+                className="cursor-pointer"
                 onClick={() => handleFocusContainer("diseno")}
               >
                 Diseño
@@ -150,8 +169,9 @@ function App() {
       {/* <Header headerRef={headerRef} /> */}
 
       <img
-        src={"/images/banner.png"}
+        src={images[count]} // Dynamically set the banner image based on the section
         className="w-full h-[30vh] sticky top-0 z-[10] object-fill"
+        alt="Section Banner"
       />
       <ScrollMenu count={count} setCount={setCount} />
       <Wrapper className={"reel"} count={0} setCount={setCount}>
@@ -162,6 +182,9 @@ function App() {
       </Wrapper>
       <Wrapper count={2} setCount={setCount} className={"foto"}>
         <Foto />
+      </Wrapper>
+      <Wrapper count={2} setCount={setCount} className={"grafico"}>
+        <Grafico />
       </Wrapper>
       <Wrapper count={3} setCount={setCount} className={"diseno"}>
         <Diseno />

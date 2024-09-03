@@ -26,6 +26,10 @@ export default function Portfolio({ count }) {
           nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
           Ut wisi enim ad minim veniam.
         </p>
+        <span className="text-orange-500 text-xl font-bold">
+          {" "}
+          Soy cliente perfecto
+        </span>
       </div>
       {/* Projects grid section */}
       <div className="text-black text-2xl flex justify-end gap-4 px-10 mb-10 font-semibold ">
