@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +9,43 @@
   overflow-x: hidden;
   margin: 0;
   text-align: center;
+}
+
+
+
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
+
+@layer components {
+
+  .header-text {
+    @apply text-6xl text-purple-600;
+  }
+
+  .subheader-text {
+    @apply text-3xl text-[#ff0000];
+  }
+
+  .description-text {
+    @apply text-black text-lg tracking-tight font-light;
+  }
+
+  .menu-text {
+    @apply text-[5rem] font-normal text-black leading-[95px];
+  }
+
+  .showcase-text {
+    @apply text-2xl;
+  }
+
+  .cta-text {
+    @apply text-orange-500 text-xl font-medium;
+  }
 }
 
 /* In your CSS file or within a <style> tag */

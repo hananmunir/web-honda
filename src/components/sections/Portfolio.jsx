@@ -1,7 +1,8 @@
 import React from "react";
 import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
-export default function Portfolio({ count }) {
+import ImageCard from "../shared/imageCard";
+export default function Portfolio({ setSelectedOption }) {
   const projects = [
     { title: "Sangre del Toro", imgSrc: "/images/logo.png" },
     { title: "Ray Motor", imgSrc: "/images/logo.png" },
@@ -14,56 +15,172 @@ export default function Portfolio({ count }) {
     { title: "Sangre del Toro", imgSrc: "/images/logo.png" },
   ];
 
+  const handleFocusContainer = (name) => {
+    const element = document.querySelector(`.${name}`);
+    element.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleOnClick = (name) => {
+    setSelectedOption("portfolio");
+  };
   return (
     <div className={twMerge("h-full w-screen py-12  flex flex-col ")}>
-      <div className="bg-white h-full w-2/4 p-4  text-right flex flex-col self-end gap-2">
-        <h1 className="text-purple-600 text-6xl">
+      <div className=' h-full w-2/4 p-4 portfolio  text-right flex flex-col self-end gap-2'>
+        <h1 className='header-text'>
           Vamos <br /> al grano
         </h1>
-        <p className="text-black text-xl mt-4">
+        <p className='description-text mt-2'>
           como una herramienta de narración visual versátil y flexible, Lorem
           ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
           nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
           Ut wisi enim ad minim veniam.
         </p>
-        <span className="text-orange-500 text-xl font-bold">
-          {" "}
-          Soy cliente perfecto
-        </span>
+        <span className='cta-text'> Soy cliente perfecto</span>
       </div>
       {/* Projects grid section */}
-      <div className="text-black text-2xl flex justify-end gap-4 px-10 mb-10 font-semibold ">
-        <div className="flex gap-2 justify-center items-center">
-          <PlusCircle size={30} color="lightgray" />
+      <div className='text-black text-2xl flex justify-end gap-4 px-10 mb-10  mt-5 font-semibold '>
+        <div
+          onClick={() => handleFocusContainer("foto")}
+          className='flex gap-2 justify-center items-center'
+        >
+          <PlusCircle size={30} color='lightgray' />
           <span>Foto</span>
         </div>
-        <div className="flex gap-2 justify-center items-center">
-          <PlusCircle size={30} color="lightgray" />
+        <div
+          onClick={() => handleFocusContainer("video")}
+          className='flex gap-2 justify-center items-center'
+        >
+          <PlusCircle size={30} color='lightgray' />
           <span>Video</span>
         </div>
-        <div className="flex gap-2 justify-center items-center">
-          <PlusCircle size={30} color="lightgray" />
+        <div
+          onClick={() => handleFocusContainer("diseno")}
+          className='flex gap-2 justify-center items-center'
+        >
+          <PlusCircle size={30} color='lightgray' />
           <span>Diseno</span>
         </div>
       </div>
-      <div className="w-full h-full grid grid-cols-3 gap-4">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="relative w-[30vw] h-[40vh] border border-black"
-          >
-            <img
-              src={project.imgSrc}
-              alt={project.title}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-4xl font-bold bg-opacity-50 bg-black p-2">
-                {project.title}
-              </h2>
-            </div>
-          </div>
-        ))}
+      <div className='w-full py-20 relative '>
+        <div className='  w-full text-left leading-[80px] z-[30] grid grid-cols-3 gap-y-10'>
+          <ImageCard
+            onClick={handleOnClick}
+            title='Sangre de Toro'
+            imgSrc='/images/wine.png'
+            titleClassname={"text-[4rem] leading-[80px] text-left"}
+            subText={
+              <>
+                {" "}
+                Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+                <span className='text-purple-600'>/</span> Diseño
+              </>
+            }
+          />{" "}
+          <ImageCard
+            onClick={handleOnClick}
+            title='Ray Motor'
+            imgSrc='/images/beach.png'
+            titleClassname={"text-[4rem] leading-[80px] text-left"}
+            subText={
+              <>
+                {" "}
+                Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+                <span className='text-purple-600'>/</span> Diseño
+              </>
+            }
+          />
+          <ImageCard
+            onClick={handleOnClick}
+            title='Sangre de Toro'
+            imgSrc='/images/wine.png'
+            titleClassname={"text-[4rem] leading-[80px] text-left"}
+            subText={
+              <>
+                {" "}
+                Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+                <span className='text-purple-600'>/</span> Diseño
+              </>
+            }
+          />
+          <ImageCard
+            onClick={handleOnClick}
+            title='Sangre de Toro'
+            imgSrc='/images/wine.png'
+            titleClassname={"text-[4rem] leading-[80px] text-left"}
+            subText={
+              <>
+                {" "}
+                Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+                <span className='text-purple-600'>/</span> Diseño
+              </>
+            }
+          />{" "}
+          <ImageCard
+            onClick={handleOnClick}
+            title='Ray Motor'
+            imgSrc='/images/beach.png'
+            titleClassname={"text-[4rem] leading-[80px] text-left"}
+            subText={
+              <>
+                {" "}
+                Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+                <span className='text-purple-600'>/</span> Diseño
+              </>
+            }
+          />
+          <ImageCard
+            onClick={handleOnClick}
+            title='Sangre de Toro'
+            imgSrc='/images/wine.png'
+            titleClassname={"text-[4rem] leading-[80px] text-left"}
+            subText={
+              <>
+                {" "}
+                Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+                <span className='text-purple-600'>/</span> Diseño
+              </>
+            }
+          />
+          <ImageCard
+            onClick={handleOnClick}
+            title='Sangre de Toro'
+            imgSrc='/images/wine.png'
+            titleClassname={"text-[4rem] leading-[80px] text-left"}
+            subText={
+              <>
+                {" "}
+                Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+                <span className='text-purple-600'>/</span> Diseño
+              </>
+            }
+          />{" "}
+          <ImageCard
+            onClick={handleOnClick}
+            title='Ray Motor'
+            imgSrc='/images/beach.png'
+            titleClassname={"text-[4rem] leading-[80px] text-left"}
+            subText={
+              <>
+                {" "}
+                Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+                <span className='text-purple-600'>/</span> Diseño
+              </>
+            }
+          />
+          <ImageCard
+            onClick={handleOnClick}
+            title='Sangre de Toro'
+            imgSrc='/images/wine.png'
+            titleClassname={"text-[4rem] leading-[80px] text-left"}
+            subText={
+              <>
+                {" "}
+                Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+                <span className='text-purple-600'>/</span> Diseño
+              </>
+            }
+          />
+        </div>
       </div>
     </div>
   );

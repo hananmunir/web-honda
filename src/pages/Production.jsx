@@ -21,10 +21,10 @@ export default function Production() {
       </span>
       <img
         src='/images/banner.png' // Dynamically set the banner image based on the section
-        className='w-full h-[30vh] sticky top-0 z-[10] object-fill'
+        className='w-full h-[45vh] sticky top-0 z-[10] object-fill'
         alt='Section Banner'
       />
-      <div className=' h-full w-2/4 p-4  text-right flex flex-col self-end gap-2'>
+      <div className='bg-white h-full w-2/4 p-4  text-right flex flex-col self-end gap-2'>
         <h1 className='text-purple-600 text-6xl'> Vídeo, Foto y Animación</h1>
         <p className='text-black text-xl mt-4'>
           Este proyecto impulsado por el Museo Agbar de las
@@ -62,7 +62,7 @@ export default function Production() {
           className='bg-gray-200 h-[40vh]'
         />
       </div>
-      <div className='py-20 h-full flex flex-col gap-10 justify-start items-start'>
+      <div className='py-20 flex flex-col gap-10 justify-start items-start'>
         <span className=' px-10 text-[8rem]'>Proyectos</span>
         <div className='w-full h-full grid grid-cols-3 gap-4'>
           {projects.map((project, index) => (

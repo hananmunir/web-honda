@@ -6,12 +6,12 @@ export default function Reel({ count }) {
     <div
       className={twMerge("h-full  pb-12 w-screen flex flex-col justify-end ")}
     >
-      <div className='bg-white ms-auto w-2/4 p-10 text-right flex flex-col items-end gap-4'>
-        <h1 className='text-purple-600 text-6xl'>
+      <div className=' ms-auto reel w-2/4 p-10 text-right flex flex-col items-end gap-4'>
+        <h1 className='header-text'>
           Somos una <br />
           agencia creativa
         </h1>
-        <p className='text-black text-lg mt-4'>
+        <p className='description-text mt-2'>
           en Barcelona especializada en servicios creativos y soluciones
           visuales innovadoras. Desde vídeo y fotografía hasta diseño gráfico y
           multimedia, ofrecemos proyectos creativos que conectan marcas con su

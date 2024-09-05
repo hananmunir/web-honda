@@ -3,17 +3,24 @@ import { twMerge } from "tailwind-merge";
 
 export default function Paellas({ count }) {
   return (
-    <div className={twMerge("h-full py-12   w-screen  flex flex-col   ")}>
+    <div
+      className={twMerge(
+        "h-screen justify-center items-center   w-screen  flex flex-col   "
+      )}
+    >
       {/* Main content section */}
-      <div className='bg-white h-full w-2/4 p-4 text-right flex flex-col self-end gap-2'>
-        <h1 className='text-purple-600 text-6xl'>
-          Podemos hacer <br /> hasta una paella ;
+      <div className='h-full paellas w-2/4 p-4 text-right flex flex-col justify-center self-end gap-2'>
+        <h1 className='header-text'>
+          Por encargo, <br /> sábados y domingos
         </h1>
-        <p className='text-black text-xl mt-4'>
-          si tu proyecto lo necesita. Nuestra experiencia nos demuestra que no
-          hay dos proyectos iguales y que en cada ocasión debemos activar
-          diferentes recursos y aportar soluciones a medida.
+        <p className='description-text mt-2'>
+          Ahora en serio. Nuestra experiencia nos demuestra que no hay dos
+          proyectos iguales. Que en cada ocasión, debemos activar diferentes
+          recursos y aportar soluciones a medida. Los que han trabajado con
+          nosotros, lo saben: si tu proyecto lo necesita, podemos hacer hasta
+          una paella
         </p>
+        <span className='cta-text'> Haz tu reserva </span>
         {/* <img src="" alt="dummy img for now" className="bg-gray-200 h-[40vh]" /> */}
       </div>
     </div>

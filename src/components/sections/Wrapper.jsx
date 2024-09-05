@@ -4,7 +4,7 @@ export default function Wrapper({ children, count, setCount, className }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const container = containerRef.current;
+    const container = document.querySelector(`.${className}`);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -15,7 +15,7 @@ export default function Wrapper({ children, count, setCount, className }) {
         });
       },
       {
-        threshold: 0.3,
+        threshold: 0.5,
       }
     );
 
@@ -29,9 +29,5 @@ export default function Wrapper({ children, count, setCount, className }) {
       }
     };
   }, []);
-  return (
-    <div ref={containerRef} className={className}>
-      {children}
-    </div>
-  );
+  return <div ref={containerRef}>{children}</div>;
 }
