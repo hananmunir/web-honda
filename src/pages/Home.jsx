@@ -22,7 +22,7 @@ const images = [
   "/images/banner.png",
 ];
 export default function Home({ setSelectedOption }) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   return (
     <>
       <img
@@ -31,14 +31,14 @@ export default function Home({ setSelectedOption }) {
         alt='Section Banner'
       />
       <ScrollMenu count={count} setCount={setCount} />
-      <Wrapper className={"reel"} count={0} setCount={setCount}>
+      {/* <Wrapper className={"reel"} count={0} setCount={setCount}>
         <Reel />
-      </Wrapper>
+      </Wrapper> */}
       <Wrapper count={1} setCount={setCount} className={"video"}>
-        <Video />
+        <Video setSelectedOption={setSelectedOption} />
       </Wrapper>
       <Wrapper count={2} setCount={setCount} className={"foto"}>
-        <Foto />
+        <Foto setSelectedOption={setSelectedOption} />
       </Wrapper>
       <Wrapper count={3} setCount={setCount} className={"grafico"}>
         <Grafico />

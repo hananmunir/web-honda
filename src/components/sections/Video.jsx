@@ -1,8 +1,19 @@
 import React from "react";
 import { PlusCircle } from "lucide-react"; // Importing an icon
 import { twMerge } from "tailwind-merge";
+import ImageCard from "../shared/imageCard";
 
 export default function Video({ count }) {
+  const projects = [
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+    },
+    {
+      title: "Sangre de Toro",
+      imgSrc: "/images/wine.png",
+    },
+  ];
   return (
     <div className={twMerge("h-full py-12   w-screen  flex flex-col  ")}>
       <div className=' video h-full  w-2/4 p-10  text-right flex flex-col items-end self-end gap-2'>
@@ -17,24 +28,34 @@ export default function Video({ count }) {
           modular se adapta a cada proyecto. <br /> <br /> *Bueno, sí hay un
           límite. Descubre hasta donde podemos llegar con
         </p>
-        <span className='cta-text'>Tu presupuesto </span>
+        <span
+          className='cta-text'
+          onClick={() => {
+            const element = document.querySelector(".footer");
+            element.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          Tu presupuesto{" "}
+        </span>
       </div>
-      <div className='flex gap-6 w-full justify-end'>
+      <div className='flex gap-6 w-full justify-end text-right'>
         <div className='w-1/5 showcase-text'>
-          <span className='text-purple-600'>/</span> Dirección{" "}
-          <span className='text-purple-600'>/</span> Guionizaje{" "}
-          <span className='text-purple-600'>/</span> Producción{" "}
-          <span className='text-purple-600'>/</span> Dirección de fotografía{" "}
-          <span className='text-purple-600'>/</span> Edición{" "}
-          <span className='text-purple-600'>/</span> Color Grading{" "}
-          <span className='text-purple-600'>/</span> VXF{" "}
-          <span className='text-purple-600'>/</span> SXF{" "}
-          <span className='text-purple-600'>/</span> Motion Graphics{" "}
-          <span className='text-purple-600'>/</span>
-          Dirección de Arte <span className='text-purple-600'>
+          <span className='text-[#6F00FF]'>/</span> Dirección{" "}
+          <span className='text-[#6F00FF]'>/</span> Guionizaje{" "}
+          <span className='text-[#6F00FF]'>/</span> Producción{" "}
+          <span className='text-[#6F00FF]'>/</span> Dirección de fotografía{" "}
+          <span className='text-[#6F00FF]'>/</span> Edición{" "}
+          <span className='text-[#6F00FF]'>/</span> Color Grading{" "}
+          <span className='text-[#6F00FF]'>/</span> VXF{" "}
+          <span className='text-[#6F00FF]'>/</span> SXF{" "}
+          <span className='text-[#6F00FF]'>/</span> Motion Graphics{" "}
+          <span className='text-[#6F00FF]'>/</span>
+          Dirección de Arte <span className='text-[#6F00FF]'>
             /
-          </span> Estilsimo <span className='text-purple-600'>/</span> Home
-          Economist <span className='text-purple-600'>/</span> Scouting
+          </span> Estilsimo <span className='text-[#6F00FF]'>/</span> Home
+          Economist <span className='text-[#6F00FF]'>/</span> Scouting
         </div>
         <img
           src='/images/video/1.webp'
@@ -45,18 +66,13 @@ export default function Video({ count }) {
       {/* "Ver Todos" section */}
       <div className='w-full py-20 relative '>
         <div className='  w-[95vw] z-[30] grid grid-cols-2'>
-          <div className='col-span-1 h-full w-full relative'>
-            <span className='absolute w-3/4 top-5 right-10 text-[9rem] font-bold text-[#ff0000] text-right mix-blend-color-burn leading-[180px]'>
-              Ray Motor
-            </span>
-            <img src='/images/beach.png' className='h-full w-full' />
-          </div>
-          <div className='col-span-1 h-full w-full relative '>
-            <span className='absolute top-5 right-10 text-[9rem] w-3/4 font-bold text-[#ff0000] text-right mix-blend-color-burn leading-[180px]'>
-              Sangre de Toro
-            </span>
-            <img src='/images/wine.png' className='h-full w-full' />
-          </div>
+          {projects.map((project, index) => (
+            <ImageCard
+              key={index}
+              title={project.title}
+              imgSrc={project.imgSrc}
+            />
+          ))}
         </div>
         <div className='absolute right-6 top-[45%]'>
           <PlusCircle size={50} color='black ' />

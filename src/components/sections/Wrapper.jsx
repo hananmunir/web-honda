@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function Wrapper({ children, count, setCount, className }) {
   const containerRef = useRef(null);
@@ -29,5 +30,12 @@ export default function Wrapper({ children, count, setCount, className }) {
       }
     };
   }, []);
-  return <div ref={containerRef}>{children}</div>;
+  return (
+    <div
+      ref={containerRef}
+      className={twMerge("py-40", count === 1 && "pt-0", count === 7 && "pb-0")}
+    >
+      {children}
+    </div>
+  );
 }

@@ -5,7 +5,7 @@ export default function Paellas({ count }) {
   return (
     <div
       className={twMerge(
-        "h-screen justify-center items-center   w-screen  flex flex-col   "
+        "h-full justify-center items-center   w-screen  flex flex-col   "
       )}
     >
       {/* Main content section */}
@@ -20,7 +20,18 @@ export default function Paellas({ count }) {
           nosotros, lo saben: si tu proyecto lo necesita, podemos hacer hasta
           una paella
         </p>
-        <span className='cta-text'> Haz tu reserva </span>
+        <span
+          className='cta-text'
+          onClick={() => {
+            const element = document.querySelector(".footer");
+            element.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          {" "}
+          Haz tu reserva{" "}
+        </span>
         {/* <img src="" alt="dummy img for now" className="bg-gray-200 h-[40vh]" /> */}
       </div>
     </div>

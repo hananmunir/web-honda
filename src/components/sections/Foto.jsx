@@ -1,8 +1,19 @@
 import React from "react";
 import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
+import ImageCard from "../shared/imageCard";
 
 export default function Foto({ count }) {
+  const projects = [
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+    },
+    {
+      title: "Sangre de Toro",
+      imgSrc: "/images/wine.png",
+    },
+  ];
   return (
     <div className={twMerge("h-full py-24    w-screen flex flex-col   ")}>
       <div className=' foto h-full w-2/4 p-4  text-right flex flex-col self-end gap-2'>
@@ -19,7 +30,7 @@ export default function Foto({ count }) {
         </p>
         <span className='cta-text'> Habla con nosotros </span>
       </div>
-      <div className='flex gap-6 w-full justify-end'>
+      <div className='flex gap-6 w-full justify-end text-right'>
         <div className='w-1/5 showcase-text'>
           <span className='text-purple-600'>/</span> Dirección{" "}
           <span className='text-purple-600'>/</span> Guionizaje{" "}
@@ -45,18 +56,13 @@ export default function Foto({ count }) {
       {/* "Ver Todos" section */}
       <div className='w-full py-20 relative '>
         <div className='  w-[95vw] z-[30] grid grid-cols-2'>
-          <div className='col-span-1 h-full w-full relative'>
-            <span className='absolute w-3/4 top-5 right-10 text-[9rem] font-bold text-[#ff0000] text-right mix-blend-color-burn leading-[180px]'>
-              Ray Motor
-            </span>
-            <img src='/images/beach.png' className='h-full w-full' />
-          </div>
-          <div className='col-span-1 h-full w-full relative '>
-            <span className='absolute top-5 right-10 text-[9rem] w-3/4 font-bold text-[#ff0000] text-right mix-blend-color-burn leading-[180px]'>
-              Sangre de Toro
-            </span>
-            <img src='/images/wine.png' className='h-full w-full' />
-          </div>
+          {projects.map((project, index) => (
+            <ImageCard
+              key={index}
+              title={project.title}
+              imgSrc={project.imgSrc}
+            />
+          ))}
         </div>
         <div className='absolute right-6 top-[45%]'>
           <PlusCircle size={50} color='black ' />

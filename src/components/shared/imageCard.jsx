@@ -1,6 +1,6 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
-
+import { useNavigate } from "react-router-dom";
 export default function ImageCard({
   title,
   imgSrc,
@@ -8,9 +8,12 @@ export default function ImageCard({
   titleClassname,
   onClick,
 }) {
+  const navigate = useNavigate();
   return (
     <div
-      onClick={onClick}
+      onClick={() => {
+        navigate("/project?title=" + title);
+      }}
       className='col-span-1 h-full w-full relative cursor-pointer'
     >
       <span

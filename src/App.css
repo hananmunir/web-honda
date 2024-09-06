@@ -24,11 +24,11 @@
 @layer components {
 
   .header-text {
-    @apply text-6xl text-purple-600;
+    @apply text-6xl text-[#6F00FF];
   }
 
   .subheader-text {
-    @apply text-3xl text-[#ff0000];
+    @apply text-3xl text-[#FF3C00];
   }
 
   .description-text {
@@ -44,7 +44,7 @@
   }
 
   .cta-text {
-    @apply text-orange-500 text-xl font-medium;
+    @apply text-[#FF3C00] text-xl font-medium cursor-pointer;
   }
 }
 

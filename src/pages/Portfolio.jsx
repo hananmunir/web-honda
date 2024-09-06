@@ -10,16 +10,16 @@ export default function Project() {
     { title: "Ray Motor", imgSrc: "/images/project/activa/p-4.jpg" },
   ];
   return (
-    <div className={twMerge("h-full  dm-sans  w-full flex flex-col ")}>
-      <span className='absolute  text-[5rem] font-normal top-10 left-10 text-6xl z-20 text-[#ff0000] w-1/4 text-left  '>
+    <div className={twMerge("  dm-sans  w-full flex flex-col ")}>
+      <span className='fixed  text-[5rem] font-normal top-10 left-10 text-6xl z-20 text-[#FF3C00] w-1/4 text-left  '>
         Portfolio
       </span>
       <img
         src='/images/project/activa/banner.jpg' // Dynamically set the banner image based on the section
-        className='w-full h-[45vh] sticky top-0 z-[10] object-fill'
+        className='w-full h-[45vh] sticky top-0 z-[-1] object-fill'
         alt='Section Banner'
       />
-      <div className='bg-white h-full pt-10 w-2/4 p-4 px-10   text-right flex flex-col self-end gap-2'>
+      <div className=' h-full pt-10 w-2/4 p-4 px-10   text-right flex flex-col self-end gap-2'>
         <h1 className='header-text'> Aula Activa H2O</h1>
         <h1 className='subheader-text'> Museo Agbar</h1>
         <p className='description-text mt-2'>
@@ -30,8 +30,8 @@ export default function Project() {
         </p>
         <span className='showcase-text my-4'>
           {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo{" "}
-          <span className='text-purple-600'>/</span> Diseño{" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo{" "}
+          <span className='text-[#6F00FF]'>/</span> Diseño{" "}
         </span>
       </div>
 

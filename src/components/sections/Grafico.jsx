@@ -18,7 +18,18 @@ export default function Grafico() {
           <br />
           No lo dudes, mándanos un briefing:
         </p>
-        <span className='cta-text'> ASAP </span>
+        <span
+          className='cta-text'
+          onClick={() => {
+            const element = document.querySelector(".footer");
+            element.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          {" "}
+          ASAP{" "}
+        </span>
       </div>
       <div className='flex gap-6 w-full justify-end'>
         <div className='w-1/5 showcase-text'>

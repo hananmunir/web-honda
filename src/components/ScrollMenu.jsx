@@ -2,8 +2,7 @@ import React, { useRef } from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 const items = [
-  "Reel",
-  "Video",
+  "Vídeo",
   "Foto",
   "Gráfico",
   "Portfolio",
@@ -14,7 +13,7 @@ const items = [
 
 const ScrollMenu = ({ count, setCount }) => {
   return (
-    <div className='fixed  top-[33vh] z-10 left-10 '>
+    <div className='fixed  top-[45vh] z-10 left-10 '>
       {/* <div className='absolute  h-48 -top-6 w-full flex flex-col justify-between items-center'>
         <ChevronUp
           onClick={() => {
@@ -42,9 +41,9 @@ const ScrollMenu = ({ count, setCount }) => {
 
       <div
         style={{
-          transform: `translateY(calc(-${count * 12.5}%)`,
+          transform: `translateY(calc(-${count * 14.7}%)`,
         }}
-        className='scroll-menu align-start relative leading-[95px] transition-all duration-300 ease-in-out flex flex-col items-start text-black text-[5rem] font-normal'
+        className='scroll-menu align-start relative leading-[95px] transition-all duration-300 ease-in-out flex flex-col items-start text-black text-[5rem] font-light'
       >
         {/* Menu items */}
         {items.map((item, index) => (
@@ -52,7 +51,7 @@ const ScrollMenu = ({ count, setCount }) => {
             key={index}
             className={twMerge(
               "  text-left ",
-              count === index && " text-[#ff0000] opacity-100"
+              count - 1 === index && " text-[#FF3C00] opacity-100"
             )}
           >
             {item}
