@@ -15,8 +15,8 @@ export default function Footer() {
         </div>
       </div>
       <div className='col-span-8 w-3/4 ms-auto flex flex-col gap-6 items-end '>
-        <span className='text-[4rem]  text-[#6F00FF]'>Algo más</span>
-        <div className='text-end '>
+        <span className='header-text  text-[#6F00FF]'>Algo más</span>
+        <div className='text-end description-text text-white '>
           Nos gusta explicarnos a nuestra manera, pero también nos gusta que
           cuando busques una agencia creativa puedas encontrarnos. Por eso en
           este texto ponemos las palabras clave para que Google nos lleve a ti

@@ -2,6 +2,7 @@ import React from "react";
 import { PlusCircle } from "lucide-react"; // Importing an icon
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
+import Carousel from "../shared/Carousel";
 
 export default function Video({ count }) {
   const projects = [
@@ -57,11 +58,9 @@ export default function Video({ count }) {
           </span> Estilsimo <span className='text-[#6F00FF]'>/</span> Home
           Economist <span className='text-[#6F00FF]'>/</span> Scouting
         </div>
-        <img
-          src='/images/video/1.webp'
-          alt='video 1'
-          className='w-[50vw] h-[50vh] object-cover'
-        />
+        <div className='w-[50vw] h-[50vh]'>
+          <Carousel images={["/images/video/1.webp", "/images/img1.jpg"]} />
+        </div>
       </div>
       {/* "Ver Todos" section */}
       <div className='w-full py-20 relative '>

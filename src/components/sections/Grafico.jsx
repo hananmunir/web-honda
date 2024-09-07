@@ -2,6 +2,7 @@ import React from "react";
 import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
+import Carousel from "../shared/Carousel";
 
 export default function Grafico() {
   return (
@@ -42,11 +43,9 @@ export default function Grafico() {
           <span className='text-purple-600'>/</span> Visuales{" "}
           <span className='text-purple-600'>/</span> Packaging{" "}
         </div>
-        <img
-          src='/images/grafico.jpg'
-          alt='video 1'
-          className='w-[50vw] h-[50vh] object-cover'
-        />
+        <div className='w-[50vw] h-[50vh]'>
+          <Carousel images={["/images/grafico.jpg", "/images/img1.jpg"]} />
+        </div>
       </div>
       {/* "Ver Todos" section */}
       <div className='w-full py-20 relative '>

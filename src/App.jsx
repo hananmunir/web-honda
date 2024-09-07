@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import "./App.css";
 import Footer from "./components/Footer";
 
-import { PlusCircle, CircleX, ChevronDown, ChevronRight } from "lucide-react";
+import { PlusCircle, CircleX, ChevronDown } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import { useLocation, useNavigate } from "react-router-dom";
