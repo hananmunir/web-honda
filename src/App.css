@@ -24,7 +24,7 @@
 @layer components {
 
   .header-text {
-    @apply text-6xl text-[#6F00FF];
+    @apply text-5xl text-[#6F00FF];
   }
 
   .subheader-text {

@@ -32,20 +32,20 @@ export default function Foto({ count }) {
       </div>
       <div className='flex gap-6 w-full justify-end text-right'>
         <div className='w-1/5 showcase-text'>
-          <span className='text-purple-600'>/</span> Dirección{" "}
-          <span className='text-purple-600'>/</span> Guionizaje{" "}
-          <span className='text-purple-600'>/</span> Producción{" "}
-          <span className='text-purple-600'>/</span> Dirección de fotografía{" "}
-          <span className='text-purple-600'>/</span> Edición{" "}
-          <span className='text-purple-600'>/</span> Color Grading{" "}
-          <span className='text-purple-600'>/</span> VXF{" "}
-          <span className='text-purple-600'>/</span> SXF{" "}
-          <span className='text-purple-600'>/</span> Motion Graphics{" "}
-          <span className='text-purple-600'>/</span>
-          Dirección de Arte <span className='text-purple-600'>
+          <span className='text-[#6F00FF]'>/</span> Dirección{" "}
+          <span className='text-[#6F00FF]'>/</span> Guionizaje{" "}
+          <span className='text-[#6F00FF]'>/</span> Producción{" "}
+          <span className='text-[#6F00FF]'>/</span> Dirección de fotografía{" "}
+          <span className='text-[#6F00FF]'>/</span> Edición{" "}
+          <span className='text-[#6F00FF]'>/</span> Color Grading{" "}
+          <span className='text-[#6F00FF]'>/</span> VXF{" "}
+          <span className='text-[#6F00FF]'>/</span> SXF{" "}
+          <span className='text-[#6F00FF]'>/</span> Motion Graphics{" "}
+          <span className='text-[#6F00FF]'>/</span>
+          Dirección de Arte <span className='text-[#6F00FF]'>
             /
-          </span> Estilsimo <span className='text-purple-600'>/</span> Home
-          Economist <span className='text-purple-600'>/</span> Scouting
+          </span> Estilsimo <span className='text-[#6F00FF]'>/</span> Home
+          Economist <span className='text-[#6F00FF]'>/</span> Scouting
         </div>
         <img
           src=''
@@ -55,7 +55,7 @@ export default function Foto({ count }) {
       </div>
       {/* "Ver Todos" section */}
       <div className='w-full py-20 relative '>
-        <div className='  w-[95vw] z-[30] grid grid-cols-2'>
+        <div className='   w-[80%] ms-auto z-[30] h-full grid grid-cols-2'>
           {projects.map((project, index) => (
             <ImageCard
               key={index}
@@ -63,12 +63,6 @@ export default function Foto({ count }) {
               imgSrc={project.imgSrc}
             />
           ))}
-        </div>
-        <div className='absolute right-6 top-[45%]'>
-          <PlusCircle size={50} color='black ' />
-        </div>
-        <div className='text-[#ff0000] text-lg flex justify-end px-14  '>
-          ver todos
         </div>
       </div>
     </div>

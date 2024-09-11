@@ -5,7 +5,7 @@ export default function Diseno({ count }) {
   return (
     <div className={twMerge("h-full py-12  w-screen flex flex-col   ")}>
       <div className='bg-white  w-2/4 p-4 h-full text-right flex flex-col self-end gap-2'>
-        <h1 className='text-purple-600 text-6xl'>
+        <h1 className='text-[#6F00FF] text-6xl'>
           Entendemos <br /> el diseño gráfico
         </h1>
         <p className='text-black text-xl mt-4'>

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-
+import toast, { Toaster } from "react-hot-toast";
 import "./App.css";
 import Footer from "./components/Footer";
 
@@ -7,6 +7,7 @@ import { PlusCircle, CircleX, ChevronDown } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import { useLocation, useNavigate } from "react-router-dom";
+import useMenuStore from "./store";
 
 const MenuText = ({ text, pathname, handleRedirect, link }) => {
   return (
@@ -23,8 +24,9 @@ const MenuText = ({ text, pathname, handleRedirect, link }) => {
 };
 
 function App({ children }) {
+  const [loading, setLoading] = useState(false);
   const [selectedOption, setSelectedOption] = useState("home");
-  const [menuOpen, setMenuOpen] = useState(false);
+  const { menuOpen, setMenuOpen } = useMenuStore();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const footerRef = useRef(null);
   const location = useLocation();
@@ -47,6 +49,36 @@ function App({ children }) {
 
   const handleRedirect = (name) => {
     navigate(name);
+  };
+
+  const handleOnSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    setLoading(true);
+
+    formData.append("access_key", "ed26393b-9012-475e-b528-37958b53016c");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then((res) => res.json())
+      .catch((error) => console.log(error));
+    console.log(res);
+    if (res.success) {
+      setLoading(false);
+      toast("Message sent successfully!");
+      event.target.reset();
+
+      console.log("Success", res);
+    }
   };
 
   return (
@@ -197,12 +229,91 @@ function App({ children }) {
 
       <div
         ref={footerRef}
-        className='text-violet-700 text-start p-5 z-20 relative bg-white  flex flex-col justify-end text-[2rem] leading-[50px] '
+        className='text-start p-5 z-20 relative bg-white  flex  justify-end text-[2rem] leading-[50px] '
       >
-        +34662122660 <br /> Carrer de l’Esglesia 4-6, Barcelona.
-        <br />
-        hola@hondostudio.com
+        <div className='text-[#6F00FF] pt-[12%]'>
+          +34662122660 <br /> Carrer de l’Esglesia 4-6, Barcelona.
+          <br />
+          hola@hondostudio.com
+        </div>
+        <section className='bg-white dark:bg-gray-900 w-3/5 '>
+          <div className='py-8 lg:py-16 px-4 mx-auto max-w-screen-md'>
+            <form onSubmit={handleOnSubmit} action='#' className='space-y-8 '>
+              <div>
+                <label
+                  for='name'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+                >
+                  Your name
+                </label>
+                <input
+                  type='name'
+                  id='name'
+                  name='name'
+                  className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
+                  placeholder='Jane Doe'
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for='email'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+                >
+                  Your email
+                </label>
+                <input
+                  type='email'
+                  name='email'
+                  id='email'
+                  className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
+                  placeholder='name@gmail.com'
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for='phone'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+                >
+                  Phone
+                </label>
+                <input
+                  type='text'
+                  name='phone'
+                  id='phone'
+                  className='block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
+                  placeholder='Your Phone Number'
+                  required
+                />
+              </div>
+              <div className='sm:col-span-2'>
+                <label
+                  for='message'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
+                >
+                  Your message
+                </label>
+                <textarea
+                  id='message'
+                  name='message'
+                  rows='6'
+                  className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'
+                  placeholder='Leave a comment...'
+                ></textarea>
+              </div>
+              <button
+                type='submit'
+                disabled={loading}
+                className='py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#6F00FF]  sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 disabled:opacity-70'
+              >
+                Send message
+              </button>
+            </form>
+          </div>
+        </section>
       </div>
+      <Toaster />
       <Footer />
     </div>
   );

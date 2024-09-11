@@ -5,7 +5,7 @@ export default function Paellas({ count }) {
   return (
     <div
       className={twMerge(
-        "h-full justify-center items-center   w-screen  flex flex-col   "
+        "h-full justify-center items-center py-12   w-screen  flex flex-col   "
       )}
     >
       {/* Main content section */}

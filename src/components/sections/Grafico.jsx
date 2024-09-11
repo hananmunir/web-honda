@@ -48,16 +48,10 @@ export default function Grafico() {
         </div>
       </div>
       {/* "Ver Todos" section */}
-      <div className='w-full py-20 relative '>
-        <div className='  w-[95vw] z-[30] grid grid-cols-2'>
+      <div className='w-full py-20 relative h-full '>
+        <div className='  w-[80%] ms-auto z-[30] h-full grid grid-cols-2'>
           <ImageCard title='Ray Motor' imgSrc='/images/beach.png' />
           <ImageCard title='Sangre de Toro' imgSrc='/images/wine.png' />
-        </div>
-        <div className='absolute right-6 top-[45%]'>
-          <PlusCircle size={50} color='black ' />
-        </div>
-        <div className='text-[#ff0000] text-lg flex justify-end px-14  '>
-          ver todos
         </div>
       </div>
     </div>

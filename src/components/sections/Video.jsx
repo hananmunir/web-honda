@@ -64,7 +64,7 @@ export default function Video({ count }) {
       </div>
       {/* "Ver Todos" section */}
       <div className='w-full py-20 relative '>
-        <div className='  w-[95vw] z-[30] grid grid-cols-2'>
+        <div className='  w-[80%] ms-auto z-[30] h-full grid grid-cols-2'>
           {projects.map((project, index) => (
             <ImageCard
               key={index}
@@ -72,12 +72,6 @@ export default function Video({ count }) {
               imgSrc={project.imgSrc}
             />
           ))}
-        </div>
-        <div className='absolute right-6 top-[45%]'>
-          <PlusCircle size={50} color='black ' />
-        </div>
-        <div className='text-[#ff0000] text-lg flex justify-end px-14  '>
-          ver todos
         </div>
       </div>
     </div>

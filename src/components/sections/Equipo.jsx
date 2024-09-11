@@ -3,12 +3,14 @@ import { twMerge } from "tailwind-merge";
 
 const TeamCard = ({ img, name, role }) => {
   return (
-    <div className='relative'>
-      <img src={img} alt='' className='w-full h-full object-cover' />
-      <span className='absolute text-3xl bottom-3 left-4 w-1/3 text-left text-[#ff0000] font-bold'>
-        {name}
-      </span>
-      <span className='block text-left ms-4 mt-2 w-2/3 text-lg'>{role}</span>
+    <div className=' h-full flex flex-col '>
+      <div className='relative'>
+        <img src={img} alt='' className='w-full h-full object-cover' />
+        <span className='absolute text-3xl bottom-3 left-4 w-1/3 text-left text-[#ff0000] font-bold'>
+          {name}
+        </span>
+      </div>
+      <span className=' text-left ms-4 mt-2 w-2/3 text-lg'>{role}</span>
     </div>
   );
 };
@@ -27,7 +29,7 @@ export default function Equipo({ count }) {
         </p>
         <span className='cta-text'> Pide por esa boquita</span>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  '>
+      <div className=' grid gap-y-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] ms-auto '>
         <TeamCard
           img='/images/img1.jpg'
           name='Cristian Jiménez'

@@ -2,196 +2,199 @@ import React, { useState } from "react";
 import { CircleX, PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
+import useMenuStore from "../../store/index";
+
+const projects = {
+  foto: [
+    {
+      title: "Sangre de Toro",
+      imgSrc: "/images/wine.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo{" "}
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Sangre de Toro",
+      imgSrc: "/images/wine.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Sangre de Toro",
+      imgSrc: "/images/wine.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Sangre de Toro",
+      imgSrc: "/images/wine.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+  ],
+  video: [
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Sangre de Toro",
+      imgSrc: "/images/wine.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+  ],
+  diseno: [
+    {
+      title: "Sangre de Toro",
+      imgSrc: "/images/wine.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+    {
+      title: "Ray Motor",
+      imgSrc: "/images/beach.png",
+      titleClassname: "text-[4rem] leading-[80px] text-left",
+      subText: (
+        <>
+          {" "}
+          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
+          <span className='text-[#6F00FF]'>/</span> Diseño
+        </>
+      ),
+    },
+  ],
+};
 export default function Portfolio({ setSelectedOption }) {
   const [selectedCategory, setSelectedCategory] = useState("foto");
-  const projects = {
-    foto: [
-      {
-        title: "Sangre de Toro",
-        imgSrc: "/images/wine.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo{" "}
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Ray Motor",
-        imgSrc: "/images/beach.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Sangre de Toro",
-        imgSrc: "/images/wine.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Ray Motor",
-        imgSrc: "/images/beach.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Sangre de Toro",
-        imgSrc: "/images/wine.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Ray Motor",
-        imgSrc: "/images/beach.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Ray Motor",
-        imgSrc: "/images/beach.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Sangre de Toro",
-        imgSrc: "/images/wine.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Ray Motor",
-        imgSrc: "/images/beach.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-    ],
-    video: [
-      {
-        title: "Ray Motor",
-        imgSrc: "/images/beach.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Ray Motor",
-        imgSrc: "/images/beach.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Sangre de Toro",
-        imgSrc: "/images/wine.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Ray Motor",
-        imgSrc: "/images/beach.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-    ],
-    diseno: [
-      {
-        title: "Sangre de Toro",
-        imgSrc: "/images/wine.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-      {
-        title: "Ray Motor",
-        imgSrc: "/images/beach.png",
-        titleClassname: "text-[4rem] leading-[80px] text-left",
-        subText: (
-          <>
-            {" "}
-            Foto <span className='text-purple-600'>/</span> Vídeo
-            <span className='text-purple-600'>/</span> Diseño
-          </>
-        ),
-      },
-    ],
-  };
+  const { menuOpen } = useMenuStore();
 
   const handleFocusContainer = (name) => {
     const element = document.querySelector(`.${name}`);
@@ -227,7 +230,12 @@ export default function Portfolio({ setSelectedOption }) {
         </span>
       </div>
       {/* Projects grid section */}
-      <div className='text-black text-4xl flex justify-end gap-5 px-10 text  mt-10  '>
+      <div
+        className={twMerge(
+          "text-black text-4xl flex justify-end gap-5 px-10 text  mt-10   ",
+          !menuOpen && "z-50"
+        )}
+      >
         <div
           onClick={() => setSelectedCategory("foto")}
           className={twMerge(
@@ -271,8 +279,8 @@ export default function Portfolio({ setSelectedOption }) {
           <span>Diseno</span>
         </div>
       </div>
-      <div className='w-full py-20 pt-10 relative '>
-        <div className='  w-full text-left leading-[80px] z-[30] grid grid-cols-3 gap-y-10'>
+      <div className=' py-20 pt-10 relative  w-[80%] ms-auto'>
+        <div className='  w-full text-left leading-[80px] z-[30] grid grid-cols-2 gap-y-10'>
           {projects[selectedCategory].map((project, index) => (
             <ImageCard
               key={index}
