@@ -18,7 +18,7 @@ export default function ImageCard({
     >
       <span
         className={twMerge(
-          "absolute w-3/4 top-5 right-10 text-[6rem] xl:text-[8rem] 2xl:text-[9rem] font-bold text-[#ff0000] text-right mix-blend-color-burn leading-[120px] xl:leading-[140px] 2xl:leading-[180px]",
+          "absolute w-3/4 top-5 right-10 text-[4rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[9rem] font-bold text-[#ff0000] text-right mix-blend-color-burn leading-[65px] lg:leading-[120px] xl:leading-[140px] 2xl:leading-[180px]",
           titleClassname
         )}
       >

@@ -29,6 +29,7 @@ function App({ children }) {
   const { menuOpen, setMenuOpen } = useMenuStore();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const footerRef = useRef(null);
+  const menuRef = useRef(null);
   const location = useLocation();
   const pathname = location.pathname;
   const navigate = useNavigate();
@@ -81,16 +82,25 @@ function App({ children }) {
     }
   };
 
+  const onClickOutsideMenu = (e) => {
+    //check if clicked outside menuContainer
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <div
+      onClick={onClickOutsideMenu}
       className={twMerge(
         "h-screen relative hide-scrollbar w-screen overflow-x-hidden  overflow-y-scroll dm-sans ",
         selectedOption !== "home" && "h-full"
       )}
     >
       <div
+        ref={menuRef}
         className={twMerge(
-          "fixed z-30 top-0 transition-all duration-300 ease-in-out right-0 translate-x-[20vw]  h-[45vh] flex gap-5",
+          "fixed z-30 top-0 menu-container transition-all duration-300 ease-in-out right-0 translate-x-[20vw]  h-[45vh] flex gap-5",
           menuOpen && "translate-x-0"
         )}
       >
@@ -118,7 +128,7 @@ function App({ children }) {
             />
           )}
         </div>
-        <div className=' p-10 !z-50 h-screen text-left py-20 w-[20vw] flex flex-col  gap-10 bg-[#1d1d1b] text-white text-2xl font-light'>
+        <div className='menu-container p-10 !z-50 h-screen text-left py-20 w-[20vw] flex flex-col  gap-10 bg-[#1d1d1b] text-white text-2xl font-light'>
           <div className=' flex flex-col gap-2'>
             <div
               onClick={() => setSubMenuOpen(!subMenuOpen)}

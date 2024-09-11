@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 export default function Project() {
+  useEffect(() => {
+    const container = document.querySelector(".portfilio-section");
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
   const projects = [
     { title: "Sangre del Toro", imgSrc: "/images/project/activa/p-1.jpg" },
     { title: "Ray Motor", imgSrc: "/images/project/activa/p-2.jpg" },
@@ -10,7 +14,9 @@ export default function Project() {
     { title: "Ray Motor", imgSrc: "/images/project/activa/p-4.jpg" },
   ];
   return (
-    <div className={twMerge("  dm-sans  w-full flex flex-col ")}>
+    <div
+      className={twMerge("portfilio-section  dm-sans  w-full flex flex-col ")}
+    >
       <span className='fixed  text-[5rem] font-normal top-10 left-10 text-6xl z-20 text-[#FF3C00] w-1/4 text-left  '>
         Portfolio
       </span>

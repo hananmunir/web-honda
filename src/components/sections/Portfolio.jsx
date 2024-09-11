@@ -9,7 +9,7 @@ const projects = {
     {
       title: "Sangre de Toro",
       imgSrc: "/images/wine.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -21,7 +21,7 @@ const projects = {
     {
       title: "Ray Motor",
       imgSrc: "/images/beach.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -33,7 +33,7 @@ const projects = {
     {
       title: "Sangre de Toro",
       imgSrc: "/images/wine.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -45,7 +45,7 @@ const projects = {
     {
       title: "Ray Motor",
       imgSrc: "/images/beach.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -57,7 +57,7 @@ const projects = {
     {
       title: "Sangre de Toro",
       imgSrc: "/images/wine.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -69,7 +69,7 @@ const projects = {
     {
       title: "Ray Motor",
       imgSrc: "/images/beach.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -81,7 +81,7 @@ const projects = {
     {
       title: "Ray Motor",
       imgSrc: "/images/beach.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -93,7 +93,7 @@ const projects = {
     {
       title: "Sangre de Toro",
       imgSrc: "/images/wine.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -105,7 +105,7 @@ const projects = {
     {
       title: "Ray Motor",
       imgSrc: "/images/beach.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -119,7 +119,7 @@ const projects = {
     {
       title: "Ray Motor",
       imgSrc: "/images/beach.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -131,7 +131,7 @@ const projects = {
     {
       title: "Ray Motor",
       imgSrc: "/images/beach.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -143,7 +143,7 @@ const projects = {
     {
       title: "Sangre de Toro",
       imgSrc: "/images/wine.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -155,7 +155,7 @@ const projects = {
     {
       title: "Ray Motor",
       imgSrc: "/images/beach.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -169,7 +169,7 @@ const projects = {
     {
       title: "Sangre de Toro",
       imgSrc: "/images/wine.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -181,7 +181,7 @@ const projects = {
     {
       title: "Ray Motor",
       imgSrc: "/images/beach.png",
-      titleClassname: "text-[4rem] leading-[80px] text-left",
+
       subText: (
         <>
           {" "}
@@ -280,13 +280,15 @@ export default function Portfolio({ setSelectedOption }) {
         </div>
       </div>
       <div className=' py-20 pt-10 relative  w-[80%] ms-auto'>
-        <div className='  w-full text-left leading-[80px] z-[30] grid grid-cols-2 gap-y-10'>
+        <div className='  w-full text-left leading-[80px] z-[30] grid grid-cols-3 gap-y-10'>
           {projects[selectedCategory].map((project, index) => (
             <ImageCard
               key={index}
               title={project.title}
               imgSrc={project.imgSrc}
-              titleClassname={project.titleClassname}
+              titleClassname={
+                "text-[2.5rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[4rem] leading-[40px] md:leading-[70px] xl:leading-[70px] 2xl:leading-[70px] text-left"
+              }
               subText={project.subText}
               onClick={handleOnClick}
             />
