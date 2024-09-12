@@ -17,7 +17,7 @@ export default function Video({ count }) {
   ];
   return (
     <div className={twMerge("h-full py-12   w-screen  flex flex-col  ")}>
-      <div className=' video h-full  w-2/4 p-10  text-right flex flex-col items-end self-end gap-2'>
+      <div className=' video h-full  w-[70%] md:w-2/4 p-4  text-right flex flex-col items-end self-end gap-2'>
         <h1 className='header-text'>
           Producciones <br /> sin límte*
         </h1>
@@ -41,8 +41,8 @@ export default function Video({ count }) {
           Tu presupuesto{" "}
         </span>
       </div>
-      <div className='flex gap-6 w-full justify-end text-right'>
-        <div className='w-1/5 showcase-text'>
+      <div className='flex gap-6 w-full justify-end  items-end md:items-start text-right flex-col-reverse md:flex-row'>
+        <div className='w-3/5 md:w-1/5 showcase-text px-3 md:px-0'>
           <span className='text-[#6F00FF]'>/</span> Dirección{" "}
           <span className='text-[#6F00FF]'>/</span> Guionizaje{" "}
           <span className='text-[#6F00FF]'>/</span> Producción{" "}
@@ -58,7 +58,7 @@ export default function Video({ count }) {
           </span> Estilsimo <span className='text-[#6F00FF]'>/</span> Home
           Economist <span className='text-[#6F00FF]'>/</span> Scouting
         </div>
-        <div className='w-[50vw] h-[50vh]'>
+        <div className='w-[50vw] h-[250px] md:h-[50vh]'>
           <Carousel images={["/images/video/1.webp", "/images/img1.jpg"]} />
         </div>
       </div>

@@ -11,10 +11,13 @@ export default function Carousel({ images }) {
     autoplay: true,
   };
   return (
-    <Slider {...settings} className='h-[50vh] w-[50vw]'>
+    <Slider {...settings} className='h-[250px] md:h-[50vh] w-[50vw]'>
       {images.map((image, index) => (
         <div key={index} className='h-full w-full over'>
-          <img src={image} className='h-[50vh] w-[50vw] object-cover' />
+          <img
+            src={image}
+            className='h-[250px] md:h-[50vh] w-[50vw] object-cover'
+          />
         </div>
       ))}
     </Slider>

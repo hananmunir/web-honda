@@ -24,27 +24,27 @@
 @layer components {
 
   .header-text {
-    @apply text-5xl text-[#6F00FF];
+    @apply text-3xl md:text-5xl text-[#6F00FF];
   }
 
   .subheader-text {
-    @apply text-3xl text-[#FF3C00];
+    @apply text-2xl md:text-3xl text-[#FF3C00];
   }
 
   .description-text {
-    @apply text-black text-lg tracking-tight font-light;
+    @apply text-black text-sm md:text-lg tracking-tight font-light;
   }
 
   .menu-text {
-    @apply text-[5rem] font-normal text-black leading-[95px];
+    @apply text-[2rem] md:text-[4rem] lg:text-[5rem] font-normal text-black leading-[45px] md:leading-[95px];
   }
 
   .showcase-text {
-    @apply text-2xl;
+    @apply text-lg md:text-2xl;
   }
 
   .cta-text {
-    @apply text-[#FF3C00] text-xl font-medium cursor-pointer;
+    @apply text-[#FF3C00] md:text-xl font-medium cursor-pointer;
   }
 }
 

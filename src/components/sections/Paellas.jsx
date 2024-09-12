@@ -9,7 +9,7 @@ export default function Paellas({ count }) {
       )}
     >
       {/* Main content section */}
-      <div className='h-full paellas w-2/4 p-4 text-right flex flex-col justify-center self-end gap-2'>
+      <div className='h-full paellas w-[70%] md:w-2/4 p-4 text-right flex flex-col justify-center self-end gap-2'>
         <h1 className='header-text'>
           Por encargo, <br /> sábados y domingos
         </h1>

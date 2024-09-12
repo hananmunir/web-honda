@@ -13,7 +13,7 @@ const items = [
 
 const ScrollMenu = ({ count, setCount }) => {
   return (
-    <div className='fixed  top-[45vh] z-10 left-10 '>
+    <div className='fixed  top-[45vh] z-10 left-5 md:left-10 '>
       {/* <div className='absolute  h-48 -top-6 w-full flex flex-col justify-between items-center'>
         <ChevronUp
           onClick={() => {
@@ -43,7 +43,7 @@ const ScrollMenu = ({ count, setCount }) => {
         style={{
           transform: `translateY(calc(-${count * 14.7}%)`,
         }}
-        className='scroll-menu align-start relative leading-[95px] transition-all duration-300 ease-in-out flex flex-col items-start text-black text-[5rem] font-light'
+        className='scroll-menu align-start relative transition-all duration-300 ease-in-out flex flex-col items-start menu-text font-light'
       >
         {/* Menu items */}
         {items.map((item, index) => (

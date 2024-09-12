@@ -100,8 +100,8 @@ function App({ children }) {
       <div
         ref={menuRef}
         className={twMerge(
-          "fixed z-30 top-0 menu-container transition-all duration-300 ease-in-out right-0 translate-x-[20vw]  h-[45vh] flex gap-5",
-          menuOpen && "translate-x-0"
+          "fixed z-30 top-0 menu-container transition-all duration-300 ease-in-out right-0 translate-x-[100vw] md:translate-x-[20vw]  h-[45vh] flex gap-8 md:gap-5  ",
+          menuOpen && "-translate-x-[0vw] md:translate-x-0"
         )}
       >
         <div className='flex flex-col items-end h-full pb-4 justify-between '>
@@ -113,7 +113,7 @@ function App({ children }) {
           {menuOpen ? (
             <CircleX
               onClick={() => setMenuOpen(false)}
-              className='cursor-pointer'
+              className='cursor-pointer -me-5  md:me-0'
               color={"#ffffff"}
               size={60}
               strokeWidth={1}
@@ -121,14 +121,19 @@ function App({ children }) {
           ) : (
             <PlusCircle
               onClick={() => setMenuOpen(true)}
-              className='cursor-pointer'
+              className='cursor-pointer -me-5  md:me-0'
               color={"#ffffff"}
               size={60}
               strokeWidth={1}
             />
           )}
         </div>
-        <div className='menu-container p-10 !z-50 h-screen text-left py-20 w-[20vw] flex flex-col  gap-10 bg-[#1d1d1b] text-white text-2xl font-light'>
+        <div className='menu-container relative p-10 !z-50 h-screen text-left py-20 w-[110vw] md:w-[20vw] flex flex-col  gap-y-10 bg-[#1d1d1b] text-white text-2xl font-light'>
+          <CircleX
+            className='absolute top-4 right-4 md:hidden'
+            strokeWidth={1}
+            onClick={() => setMenuOpen(false)}
+          />
           <div className=' flex flex-col gap-2'>
             <div
               onClick={() => setSubMenuOpen(!subMenuOpen)}
@@ -239,14 +244,14 @@ function App({ children }) {
 
       <div
         ref={footerRef}
-        className='text-start p-5 z-20 relative bg-white  flex  justify-end text-[2rem] leading-[50px] '
+        className='text-start p-5 z-20 relative bg-white  flex  justify-end text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse '
       >
         <div className='text-[#6F00FF] pt-[12%]'>
           +34662122660 <br /> Carrer de l’Esglesia 4-6, Barcelona.
           <br />
           hola@hondostudio.com
         </div>
-        <section className='bg-white dark:bg-gray-900 w-3/5 '>
+        <section className='bg-white dark:bg-gray-900 md:w-3/5 '>
           <div className='py-8 lg:py-16 px-4 mx-auto max-w-screen-md'>
             <form onSubmit={handleOnSubmit} action='#' className='space-y-8 '>
               <div>

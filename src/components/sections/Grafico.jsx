@@ -7,7 +7,7 @@ import Carousel from "../shared/Carousel";
 export default function Grafico() {
   return (
     <div className={twMerge("h-full py-24    w-screen flex flex-col   ")}>
-      <div className=' h-full grafico w-2/4 p-4  text-right flex flex-col self-end gap-2'>
+      <div className=' h-full grafico w-[70%] md:w-2/4 p-4  text-right flex flex-col self-end gap-2'>
         <h1 className='header-text'>Hablamos el mismo idioma</h1>
         <p className='description-text mt-2'>
           Aunque hemos ido transitando hacia la producción audiovisual en los
@@ -32,8 +32,8 @@ export default function Grafico() {
           ASAP{" "}
         </span>
       </div>
-      <div className='flex gap-6 w-full justify-end'>
-        <div className='w-1/5 showcase-text'>
+      <div className='flex gap-6 w-full justify-end items-end md:items-start flex-col-reverse md:flex-row'>
+        <div className='w-3/5 md:w-1/5 showcase-text'>
           <span className='text-purple-600'>/</span> Branding{" "}
           <span className='text-purple-600'>/</span> Publicidad{" "}
           <span className='text-purple-600'>/</span> Ilustración{" "}
@@ -43,7 +43,7 @@ export default function Grafico() {
           <span className='text-purple-600'>/</span> Visuales{" "}
           <span className='text-purple-600'>/</span> Packaging{" "}
         </div>
-        <div className='w-[50vw] h-[50vh]'>
+        <div className='w-[50vw] h-full '>
           <Carousel images={["/images/grafico.jpg", "/images/img1.jpg"]} />
         </div>
       </div>

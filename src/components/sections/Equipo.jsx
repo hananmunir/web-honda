@@ -6,11 +6,13 @@ const TeamCard = ({ img, name, role }) => {
     <div className=' h-full flex flex-col '>
       <div className='relative'>
         <img src={img} alt='' className='w-full h-full object-cover' />
-        <span className='absolute text-3xl bottom-3 left-4 w-1/3 text-left text-[#ff0000] font-bold'>
+        <span className='absolute text-xl md:text-3xl bottom-3 left-4 w-1/3 text-left text-[#ff0000] font-bold'>
           {name}
         </span>
       </div>
-      <span className=' text-left ms-4 mt-2 w-2/3 text-lg'>{role}</span>
+      <span className=' text-left ms-2 md:ms-4 mt-2 w-2/3 text-sm md:text-lg'>
+        {role}
+      </span>
     </div>
   );
 };
@@ -18,7 +20,7 @@ const TeamCard = ({ img, name, role }) => {
 export default function Equipo({ count }) {
   return (
     <div className={twMerge("h-full py-12  w-screen  flex flex-col ")}>
-      <div className=' equipo  w-2/4 p-4 h-full text-right flex flex-col self-end gap-2'>
+      <div className=' equipo  w-[70%] md:w-2/4 p-4 h-full text-right flex flex-col self-end gap-2'>
         <h1 className='header-text'>Multidisciplinar & Responsive</h1>
         <p className='description-text mt-2'>
           ¿Y eso que quiere decir? Muy sencillo. Que cada uno de nosotros domina
@@ -29,7 +31,7 @@ export default function Equipo({ count }) {
         </p>
         <span className='cta-text'> Pide por esa boquita</span>
       </div>
-      <div className=' grid gap-y-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] ms-auto '>
+      <div className=' grid gap-y-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[65%] md:w-[80%] ms-auto '>
         <TeamCard
           img='/images/img1.jpg'
           name='Cristian Jiménez'
