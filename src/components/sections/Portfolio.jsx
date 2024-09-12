@@ -13,8 +13,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo{" "}
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo{" "}
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -25,8 +25,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -37,8 +37,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -49,8 +49,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -61,8 +61,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -73,8 +73,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -85,8 +85,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -97,8 +97,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -109,8 +109,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -123,8 +123,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -135,8 +135,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -147,8 +147,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -159,8 +159,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -173,8 +173,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -185,8 +185,8 @@ const projects = {
       subText: (
         <>
           {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
+          Foto <span className="text-[#6F00FF]">/</span> Vídeo
+          <span className="text-[#6F00FF]">/</span> Diseño
         </>
       ),
     },
@@ -206,18 +206,18 @@ export default function Portfolio({ setSelectedOption }) {
   };
   return (
     <div className={twMerge("h-full w-screen py-12  flex flex-col ")}>
-      <div className=' h-full w-3/5 md:w-2/4 p-4 portfolio  text-right flex flex-col self-end gap-2'>
-        <h1 className='header-text'>
+      <div className=" h-full w-3/5 md:w-2/4 p-4 portfolio  text-right flex flex-col self-end gap-2">
+        <h1 className="header-text">
           Vamos <br /> al grano
         </h1>
-        <p className='description-text mt-2'>
+        <p className="description-text mt-2">
           como una herramienta de narración visual versátil y flexible, Lorem
           ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
           nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
           Ut wisi enim ad minim veniam.
         </p>
         <span
-          className='cta-text'
+          className="cta-text"
           onClick={() => {
             const element = document.querySelector(".footer");
             element.scrollIntoView({
@@ -243,18 +243,18 @@ export default function Portfolio({ setSelectedOption }) {
             selectedCategory === "foto" && "text-[#FF3C00]"
           )}
         >
-          <div className=' md:hidden'>
+          <div className=" md:hidden">
             {selectedCategory === "foto" ? (
-              <PlusCircle size={20} strokeWidth={1} color='#FF3C00' />
+              <PlusCircle size={20} strokeWidth={1} color="#FF3C00" />
             ) : (
-              <CircleX size={20} strokeWidth={1} color='lightgray' />
+              <CircleX size={20} strokeWidth={1} color="lightgray" />
             )}
           </div>
-          <div className='hidden md:block'>
+          <div className="hidden md:block">
             {selectedCategory === "foto" ? (
-              <PlusCircle size={30} strokeWidth={1} color='#FF3C00' />
+              <PlusCircle size={30} strokeWidth={1} color="#FF3C00" />
             ) : (
-              <CircleX size={30} strokeWidth={1} color='lightgray' />
+              <CircleX size={30} strokeWidth={1} color="lightgray" />
             )}
           </div>
           <span>Foto</span>
@@ -266,18 +266,18 @@ export default function Portfolio({ setSelectedOption }) {
             selectedCategory === "video" && "text-[#FF3C00]"
           )}
         >
-          <div className=' md:hidden'>
+          <div className=" md:hidden">
             {selectedCategory === "video" ? (
-              <PlusCircle size={20} strokeWidth={1} color='#FF3C00' />
+              <PlusCircle size={20} strokeWidth={1} color="#FF3C00" />
             ) : (
-              <CircleX size={20} strokeWidth={1} color='lightgray' />
+              <CircleX size={20} strokeWidth={1} color="lightgray" />
             )}
           </div>
-          <div className='hidden md:block'>
+          <div className="hidden md:block">
             {selectedCategory === "video" ? (
-              <PlusCircle size={30} strokeWidth={1} color='#FF3C00' />
+              <PlusCircle size={30} strokeWidth={1} color="#FF3C00" />
             ) : (
-              <CircleX size={30} strokeWidth={1} color='lightgray' />
+              <CircleX size={30} strokeWidth={1} color="lightgray" />
             )}
           </div>
           <span>Video</span>
@@ -289,25 +289,25 @@ export default function Portfolio({ setSelectedOption }) {
             selectedCategory === "diseno" && "text-[#FF3C00]"
           )}
         >
-          <div className=' md:hidden'>
+          <div className=" md:hidden">
             {selectedCategory === "diseno" ? (
-              <PlusCircle size={20} strokeWidth={1} color='#FF3C00' />
+              <PlusCircle size={20} strokeWidth={1} color="#FF3C00" />
             ) : (
-              <CircleX size={20} strokeWidth={1} color='lightgray' />
+              <CircleX size={20} strokeWidth={1} color="lightgray" />
             )}
           </div>{" "}
-          <div className='hidden md:block'>
+          <div className="hidden md:block">
             {selectedCategory === "diseno" ? (
-              <PlusCircle size={30} strokeWidth={1} color='#FF3C00' />
+              <PlusCircle size={30} strokeWidth={1} color="#FF3C00" />
             ) : (
-              <CircleX size={30} strokeWidth={1} color='lightgray' />
+              <CircleX size={30} strokeWidth={1} color="lightgray" />
             )}
           </div>
           <span>Diseno</span>
         </div>
       </div>
-      <div className=' py-20 pt-4 md:pt-10 relative  w-[80%] ms-auto'>
-        <div className='  w-full text-left leading-[80px] z-[30] grid grid-cols-2 md:grid-cols-3 gap-y-4 md:gap-y-10'>
+      <div className=" py-20 pt-4 md:pt-10 relative  w-[80%] ms-auto">
+        <div className="  w-full text-left leading-[80px] z-[30] grid grid-cols-2 md:grid-cols-3 gap-y-4 md:gap-y-10">
           {projects[selectedCategory].map((project, index) => (
             <ImageCard
               key={index}
