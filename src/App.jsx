@@ -57,7 +57,7 @@ function App({ children }) {
     const formData = new FormData(event.target);
     setLoading(true);
 
-    formData.append("access_key", "ed26393b-9012-475e-b528-37958b53016c");
+    formData.append("access_key", "240c802d-555f-4757-b2c9-e962ead863a1");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -104,16 +104,16 @@ function App({ children }) {
           menuOpen && "-translate-x-[0vw] md:translate-x-0"
         )}
       >
-        <div className="flex flex-col items-end h-full pb-4 justify-between ">
+        <div className='flex flex-col items-end h-full pb-4 justify-between '>
           {" "}
-          <span className=" text-white flex items-center gap-3  z-[30] text-[3rem]   ">
-            <img src="/images/logo.png" alt="logo" className="h-10" />
+          <span className=' text-white flex items-center gap-3  z-[30] text-[3rem]   '>
+            <img src='/images/logo.png' alt='logo' className='h-10' />
             Hondo
           </span>
           {menuOpen ? (
             <CircleX
               onClick={() => setMenuOpen(false)}
-              className="cursor-pointer -me-5  md:me-0"
+              className='cursor-pointer -me-5  md:me-0'
               color={"#ffffff"}
               size={60}
               strokeWidth={1}
@@ -121,23 +121,23 @@ function App({ children }) {
           ) : (
             <PlusCircle
               onClick={() => setMenuOpen(true)}
-              className="cursor-pointer -me-5  md:me-0"
+              className='cursor-pointer -me-5  md:me-0'
               color={"#ffffff"}
               size={60}
               strokeWidth={1}
             />
           )}
         </div>
-        <div className="menu-container relative p-10 !z-50 h-screen text-left py-20 w-[110vw] md:w-[20vw] flex flex-col  gap-y-10 bg-[#1d1d1b] text-white text-2xl font-light">
+        <div className='menu-container relative p-10 !z-50 h-screen text-left py-20 w-[110vw] md:w-[20vw] flex flex-col  gap-y-10 bg-[#1d1d1b] text-white text-2xl font-light'>
           <CircleX
-            className="absolute top-4 right-4 md:hidden"
+            className='absolute top-4 right-4 md:hidden'
             strokeWidth={1}
             onClick={() => setMenuOpen(false)}
           />
-          <div className=" flex flex-col gap-2">
+          <div className=' flex flex-col gap-2'>
             <div
               onClick={() => setSubMenuOpen(!subMenuOpen)}
-              className="flex gap-2 items-center"
+              className='flex gap-2 items-center'
             >
               <span
                 className={twMerge(
@@ -164,44 +164,44 @@ function App({ children }) {
               )}
             >
               <span
-                className="cursor-pointer"
+                className='cursor-pointer'
                 onClick={() => handleFocusContainer("video")}
               >
                 Video
               </span>
               <span
-                className="cursor-pointer"
+                className='cursor-pointer'
                 onClick={() => handleFocusContainer("foto")}
               >
                 Foto
               </span>
               <span
-                className="cursor-pointer"
+                className='cursor-pointer'
                 onClick={() => handleFocusContainer("grafico")}
               >
                 Grafico
               </span>
 
               <span
-                className="cursor-pointer"
+                className='cursor-pointer'
                 onClick={() => handleFocusContainer("portfolio")}
               >
                 Portfolio
               </span>
               <span
-                className="cursor-pointer"
+                className='cursor-pointer'
                 onClick={() => handleFocusContainer("equipo")}
               >
                 Equipo
               </span>
               <span
-                className="cursor-pointer"
+                className='cursor-pointer'
                 onClick={() => handleFocusContainer("paellas")}
               >
                 Paellas
               </span>
               <span
-                className="cursor-pointer"
+                className='cursor-pointer'
                 onClick={() => handleFocusContainer("contact")}
               >
                 Contact
@@ -244,83 +244,83 @@ function App({ children }) {
 
       <div
         ref={footerRef}
-        className="text-start p-5 z-20 relative bg-white  flex  justify-end text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse "
+        className='text-start p-5 z-20 relative bg-white  flex  justify-end text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse '
       >
-        <div className="text-[#6F00FF] pt-[12%]">
+        <div className='text-[#6F00FF] pt-[12%]'>
           +34662122660 <br /> Carrer de l’Esglesia 4-6, Barcelona.
           <br />
           hola@hondostudio.com
         </div>
-        <section className="bg-white dark:bg-gray-900 md:w-3/5 ">
-          <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <form onSubmit={handleOnSubmit} action="#" className="space-y-8 ">
+        <section className='bg-white dark:bg-gray-900 md:w-3/5 '>
+          <div className='py-8 lg:py-16 px-4 mx-auto max-w-screen-md'>
+            <form onSubmit={handleOnSubmit} action='#' className='space-y-8 '>
               <div>
                 <label
-                  for="name"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  for='name'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
                 >
                   Your name
                 </label>
                 <input
-                  type="name"
-                  id="name"
-                  name="name"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                  placeholder="Jane Doe"
+                  type='name'
+                  id='name'
+                  name='name'
+                  className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
+                  placeholder='Jane Doe'
                   required
                 />
               </div>
               <div>
                 <label
-                  for="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  for='email'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
                 >
                   Your email
                 </label>
                 <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                  placeholder="name@gmail.com"
+                  type='email'
+                  name='email'
+                  id='email'
+                  className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
+                  placeholder='name@gmail.com'
                   required
                 />
               </div>
               <div>
                 <label
-                  for="phone"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  for='phone'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
                 >
                   Phone
                 </label>
                 <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                  placeholder="Your Phone Number"
+                  type='text'
+                  name='phone'
+                  id='phone'
+                  className='block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
+                  placeholder='Your Phone Number'
                   required
                 />
               </div>
-              <div className="sm:col-span-2">
+              <div className='sm:col-span-2'>
                 <label
-                  for="message"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                  for='message'
+                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
                 >
                   Your message
                 </label>
                 <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                  placeholder="Leave a comment..."
+                  id='message'
+                  name='message'
+                  rows='6'
+                  className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'
+                  placeholder='Leave a comment...'
                 ></textarea>
               </div>
               <button
-                type="submit"
+                type='submit'
                 disabled={loading}
-                className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#6F00FF]  sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 disabled:opacity-70"
+                className='py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#6F00FF]  sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 disabled:opacity-70'
               >
                 Send message
               </button>
