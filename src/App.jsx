@@ -13,7 +13,7 @@ const MenuText = ({ text, pathname, handleRedirect, link }) => {
   return (
     <span
       className={twMerge(
-        "cursor-pointer",
+        "cursor-pointer text-[1em] ",
         pathname.includes(link) && "text-[#FF3C00]"
       )}
       onClick={() => handleRedirect(link)}
@@ -131,20 +131,20 @@ function App({ children }) {
             />
           )}
         </div>
-        <div className='menu-container relative p-10 !z-50 h-screen md:h-[45vh] text-left py-6 w-[110vw] md:w-[20vw] flex flex-col  gap-y-3 bg-[#1d1d1b] text-white text-2xl font-light'>
+        <div className='menu-container relative p-10 !z-50 h-screen md:h-[45vh] text-left py-6 w-[110vw] md:w-[20vw] flex flex-col  justify-around bg-[#1d1d1b] text-white text-2xl font-light'>
           <CircleX
             className='absolute top-4 right-4 md:hidden'
             strokeWidth={1}
             onClick={() => setMenuOpen(false)}
           />
-          <div className=' flex flex-col gap-2'>
+          <div className=' flex flex-col '>
             <div
               onClick={() => setSubMenuOpen(!subMenuOpen)}
               className='flex gap-2 items-center'
             >
               <span
                 className={twMerge(
-                  "cursor-pointer",
+                  "cursor-pointer ",
                   pathname === "/" && "text-[#FF3C00] "
                 )}
               >
@@ -162,8 +162,9 @@ function App({ children }) {
             </div>
             <div
               className={twMerge(
-                "flex flex-col gap-2 text-xl h-0 opacity-0  ms-10 pointer-events-none transition-all duration-300 ease-in-out",
-                subMenuOpen && "h-full opacity-70 pointer-events-auto"
+                "flex flex-col text-xl h-0  opacity-0  ms-10 pointer-events-none transition-all duration-300 ease-in-out ",
+                subMenuOpen &&
+                  "h-full opacity-70 pointer-events-auto my-3 gap-2 "
               )}
             >
               <span
@@ -247,23 +248,17 @@ function App({ children }) {
 
       <div
         ref={footerRef}
-        className='text-start p-5 z-[60] relative bg-white  flex  justify-end text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse '
+        className='text-start p-5 z-[60] relative  flex  justify-end text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse '
       >
         <div className='text-[#6F00FF] pt-[12%]'>
           +34662122660 <br /> Carrer de l’Esglesia 4-6, Barcelona.
           <br />
           hola@hondostudio.com
         </div>
-        <section className='bg-white dark:bg-gray-900 md:w-3/5 '>
+        <section className=' dark:bg-gray-900 md:w-3/5 '>
           <div className='py-8 lg:py-16 px-4 mx-auto max-w-screen-md'>
-            <form onSubmit={handleOnSubmit} action='#' className='space-y-8 '>
+            <form onSubmit={handleOnSubmit} action='#' className='space-y-2 '>
               <div>
-                <label
-                  for='name'
-                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
-                >
-                  Your name
-                </label>
                 <input
                   type='name'
                   id='name'
@@ -274,12 +269,6 @@ function App({ children }) {
                 />
               </div>
               <div>
-                <label
-                  for='email'
-                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
-                >
-                  Your email
-                </label>
                 <input
                   type='email'
                   name='email'
@@ -290,12 +279,6 @@ function App({ children }) {
                 />
               </div>
               <div>
-                <label
-                  for='phone'
-                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
-                >
-                  Phone
-                </label>
                 <input
                   type='text'
                   name='phone'
@@ -306,12 +289,6 @@ function App({ children }) {
                 />
               </div>
               <div className='sm:col-span-2'>
-                <label
-                  for='message'
-                  className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
-                >
-                  Your message
-                </label>
                 <textarea
                   id='message'
                   name='message'
@@ -323,7 +300,7 @@ function App({ children }) {
               <button
                 type='submit'
                 disabled={loading}
-                className='py-3 px-5 text-sm font-medium text-center text-white  bg-[#FF3C00]  sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 disabled:opacity-70'
+                className='py-3  text-sm font-medium text-center  text-[#FF3C00]  sm:w-fit hover:text-[#FF3C00]/80 ring-none outline-none disabled:opacity-70'
               >
                 Send message {">"}
               </button>

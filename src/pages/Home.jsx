@@ -18,19 +18,33 @@ const images = [
   "/images/banner.png",
   "/images/graficobanner.jpg",
   "/images/portfoliobanner.jpg",
-  "/images/equipobanner.jpg",
-  "/images/paellasbanner.jpg",
+  "/images/Header_Equipo.webp",
+  "/images/Header_Paella.webp",
   "/images/banner.png",
 ];
+
 export default function Home({ setSelectedOption }) {
   const [count, setCount] = useState(0);
   return (
     <>
-      <img
-        src={images[count]} // Dynamically set the banner image based on the section
-        className='w-full h-[45vh] sticky top-0 z-[-1] object-fill'
-        alt='Section Banner'
-      />
+      {count <= 3 ? (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className='w-full h-[45vh] sticky top-0 z-[-1] object-fill'
+        >
+          <source src='/video/header.mp4' type='video/mp4' />
+        </video>
+      ) : (
+        <img
+          src={images[count]} // Dynamically set the banner image based on the section
+          className='w-full h-[45vh] sticky top-0 z-[-1] object-fill'
+          alt='Section Banner'
+        />
+      )}
+
       <ScrollMenu count={count} setCount={setCount} />
       <Wrapper className={"home"} count={0} setCount={setCount}>
         <First />

@@ -59,7 +59,17 @@ export default function Video({ count }) {
           Economist <span className='text-[#6F00FF]'>/</span> Scouting
         </div>
         <div className='w-[50vw] h-[250px] md:h-[50vh]'>
-          <Carousel images={["/images/video/1.webp", "/images/img1.jpg"]} />
+          <Carousel
+            images={[
+              "/images/video/1.jpg",
+              "/images/video/2.jpg",
+              "/images/video/3.jpg",
+              "/images/video/4.jpg",
+              "/images/video/5.jpg",
+              "/images/video/6.jpg",
+              "/images/video/7.jpg",
+            ]}
+          />
         </div>
       </div>
       {/* "Ver Todos" section */}

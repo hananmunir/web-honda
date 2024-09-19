@@ -8,7 +8,9 @@ export default function Grafico() {
   return (
     <div className={twMerge("h-full py-24    w-screen flex flex-col   ")}>
       <div className=' h-full grafico w-[70%] md:w-2/4 p-4  text-right flex flex-col self-end gap-2'>
-        <h1 className='header-text'>Hablamos el mismo idioma</h1>
+        <h1 className='header-text'>
+          Hablamos el <br /> mismo idioma
+        </h1>
         <p className='description-text mt-2'>
           Aunque hemos ido transitando hacia la producción audiovisual en los
           últimos años, en otra vida fuimos diseñadores gráficos y directores de
@@ -33,18 +35,31 @@ export default function Grafico() {
         </span>
       </div>
       <div className='flex gap-6 w-full justify-end items-end md:items-start flex-col-reverse md:flex-row'>
-        <div className='w-3/5 md:w-1/5 showcase-text'>
+        <div className='w-3/5 md:w-1/5 showcase-text text-right'>
           <span className='text-purple-600'>/</span> Branding{" "}
           <span className='text-purple-600'>/</span> Publicidad{" "}
-          <span className='text-purple-600'>/</span> Ilustración{" "}
+          <span className='text-purple-600'>/</span> Ilustración <br />
           <span className='text-purple-600'>/</span> Diseño Editorial{" "}
           <span className='text-purple-600'>/</span> Redes Sociales{" "}
-          <span className='text-purple-600'>/</span> Diseño Web{" "}
+          <span className='text-purple-600'>/</span> Diseño Web <br />
           <span className='text-purple-600'>/</span> Visuales{" "}
           <span className='text-purple-600'>/</span> Packaging{" "}
         </div>
         <div className='w-[50vw] h-full '>
-          <Carousel images={["/images/grafico.jpg", "/images/img1.jpg"]} />
+          <Carousel
+            images={[
+              "/images/grafico/1.jpg",
+              "/images/grafico/2.jpg",
+              "/images/grafico/3.jpg",
+              "/images/grafico/4.jpg",
+              "/images/grafico/5.jpg",
+              "/images/grafico/6.webp",
+              "/images/grafico/7.jpg",
+              "/images/grafico/8.jpg",
+              "/images/grafico/9.jpg",
+              "/images/grafico/10.jpg",
+            ]}
+          />
         </div>
       </div>
       {/* "Ver Todos" section */}

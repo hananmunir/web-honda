@@ -24,7 +24,7 @@
 @layer components {
 
   .header-text {
-    @apply text-3xl md:text-5xl text-[#6F00FF];
+    @apply text-3xl md:text-5xl text-[#6F00FF] md:leading-[55px];
   }
 
   .subheader-text {

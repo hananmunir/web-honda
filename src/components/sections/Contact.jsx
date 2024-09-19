@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function Contact({ count }) {
   return (
-    <div className={twMerge("h-full py-12   w-screen flex flex-col")}>
+    <div className={twMerge("h-full    w-screen flex flex-col py-60")}>
       <div className=' w-[70%] md:w-2/4 contact p-4 h-full text-right flex flex-col self-end gap-2'>
         <h1 className='header-text'>
           Ya sabes un <br /> poquito más sobre nosotros

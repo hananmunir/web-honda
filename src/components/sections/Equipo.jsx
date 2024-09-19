@@ -21,7 +21,9 @@ export default function Equipo({ count }) {
   return (
     <div className={twMerge("h-full py-12  w-screen  flex flex-col ")}>
       <div className=' equipo  w-[70%] md:w-2/4 p-4 h-full text-right flex flex-col self-end gap-2'>
-        <h1 className='header-text'>Multidisciplinar & Responsive</h1>
+        <h1 className='header-text'>
+          Multidisciplinar <br /> & Responsive
+        </h1>
         <p className='description-text mt-2'>
           ¿Y eso que quiere decir? Muy sencillo. Que cada uno de nosotros domina
           varios territorios creativos y que, en conjunto, podemos afrontar
@@ -35,26 +37,38 @@ export default function Equipo({ count }) {
         <TeamCard
           img='/images/img1.jpg'
           name='Cristian Jiménez'
-          role=' Director Creativo 
-& Youtuber'
+          role={
+            <span>
+              Director Creativo <br />& Youtuber
+            </span>
+          }
         />
         <TeamCard
           img='/images/img-2.jpg'
           name='Bego Alarcón'
-          role=' Project Manager
- & Escultora conceptual'
+          role={
+            <span>
+              Project Manager <br />& Escultora conceptual
+            </span>
+          }
         />
         <TeamCard
           img='/images/img3.jpg'
           name='Gus Arens'
-          role=' Producer
- & Guitarrista'
+          role={
+            <span>
+              Productor <br />& Guitarrista
+            </span>
+          }
         />
         <TeamCard
           img='/images/img4.jpg'
           name='Anto Gentile'
-          role=' Diseño Gráfico
- & Edición'
+          role={
+            <span>
+              Director de Fotografía <br />& Pintor
+            </span>
+          }
         />
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
-
+import Carousel from "../shared/Carousel";
 export default function Foto({ count }) {
   const projects = [
     {
@@ -17,7 +17,9 @@ export default function Foto({ count }) {
   return (
     <div className={twMerge("h-full py-24    w-screen flex flex-col   ")}>
       <div className=' foto h-full w-[70%] md:w-2/4 p-4  text-right flex flex-col self-end gap-2'>
-        <h1 className='header-text'>Donde no llega Midjourney</h1>
+        <h1 className='header-text'>
+          Donde no llega <br /> Midjourney
+        </h1>
         <p className='description-text mt-2'>
           Tu y yo sabemos que para conseguir una buena producción fotográfica,
           aún es necesario contar con seres humanos, creativos, con talento y
@@ -47,11 +49,25 @@ export default function Foto({ count }) {
           </span> Estilsimo <span className='text-[#6F00FF]'>/</span> Home
           Economist <span className='text-[#6F00FF]'>/</span> Scouting
         </div>
-        <img
-          src=''
-          alt='video 1'
-          className='w-[50vw]  bg-gray-200 h-[50vh] object-cover'
-        />
+        <div className='w-[50vw] h-[250px] md:h-[50vh]'>
+          <Carousel
+            images={[
+              "/images/foto/1.jpg",
+              "/images/foto/2.jpg",
+              "/images/foto/3.jpg",
+              "/images/foto/4.jpg",
+              "/images/foto/5.jpg",
+              "/images/foto/6.jpg",
+              "/images/foto/7.jpg",
+              "/images/foto/8.jpg",
+              "/images/foto/9.jpg",
+              "/images/foto/10.jpg",
+              "/images/foto/11.jpg",
+              "/images/foto/12.jpg",
+              "/images/foto/13.jpg",
+            ]}
+          />
+        </div>
       </div>
       {/* "Ver Todos" section */}
       <div className='w-full py-20 relative '>
