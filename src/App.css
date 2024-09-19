@@ -44,8 +44,14 @@
   }
 
   .cta-text {
-    @apply text-[#FF3C00] md:text-xl font-medium cursor-pointer;
+    @apply text-[#FF3C00] md:text-xl font-medium cursor-pointer my-2.5;
   }
+}
+
+/* add cheveron right as After on cta.text */
+.cta-text::after {
+  content: '>';
+  margin-left: 0.1rem;
 }
 
 /* In your CSS file or within a <style> tag */

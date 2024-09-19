@@ -5,12 +5,16 @@ export default function Wrapper({ children, count, setCount, className }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    console.log(className);
     const container = document.querySelector(`.${className}`);
+
+    if (!container) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            console.log("Intersecting", count, className);
             setCount(count);
           }
         });
@@ -20,20 +24,16 @@ export default function Wrapper({ children, count, setCount, className }) {
       }
     );
 
-    if (container) {
-      observer.observe(container);
-    }
+    observer.observe(container);
 
     return () => {
-      if (container) {
-        observer.unobserve(container);
-      }
+      observer.unobserve(container);
     };
   }, []);
   return (
     <div
       ref={containerRef}
-      className={twMerge("py-40", count === 1 && "pt-0", count === 7 && "pb-0")}
+      className={twMerge("py-40", count === 0 && "pt-0", count === 7 && "pb-0")}
     >
       {children}
     </div>

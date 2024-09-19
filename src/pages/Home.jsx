@@ -10,6 +10,7 @@ import Paellas from "../components/sections/Paellas";
 import Grafico from "../components/sections/Grafico";
 import Foto from "../components/sections/Foto";
 import Wrapper from "../components/sections/Wrapper";
+import First from "../components/sections/FirstSection";
 
 const images = [
   "/images/banner.png",
@@ -22,7 +23,7 @@ const images = [
   "/images/banner.png",
 ];
 export default function Home({ setSelectedOption }) {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
   return (
     <>
       <img
@@ -31,9 +32,9 @@ export default function Home({ setSelectedOption }) {
         alt='Section Banner'
       />
       <ScrollMenu count={count} setCount={setCount} />
-      {/* <Wrapper className={"reel"} count={0} setCount={setCount}>
-        <Reel />
-      </Wrapper> */}
+      <Wrapper className={"home"} count={0} setCount={setCount}>
+        <First />
+      </Wrapper>
       <Wrapper count={1} setCount={setCount} className={"video"}>
         <Video setSelectedOption={setSelectedOption} />
       </Wrapper>

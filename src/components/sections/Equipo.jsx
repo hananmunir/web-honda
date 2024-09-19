@@ -5,7 +5,7 @@ const TeamCard = ({ img, name, role }) => {
   return (
     <div className=' h-full flex flex-col '>
       <div className='relative'>
-        <img src={img} alt='' className='w-full h-full object-cover' />
+        <img src={img} alt='' className='w-full  object-contain' />
         <span className='absolute text-xl md:text-3xl bottom-3 left-4 w-1/3 text-left text-[#ff0000] font-bold'>
           {name}
         </span>
@@ -31,7 +31,7 @@ export default function Equipo({ count }) {
         </p>
         <span className='cta-text'> Pide por esa boquita</span>
       </div>
-      <div className=' grid gap-y-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[65%] md:w-[80%] ms-auto '>
+      <div className=' grid gap-y-3 grid-cols-1 md:grid-cols-2  w-[65%] md:w-[70%] ms-auto '>
         <TeamCard
           img='/images/img1.jpg'
           name='Cristian Jiménez'

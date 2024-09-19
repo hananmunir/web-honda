@@ -12,8 +12,8 @@ export default function Events() {
       subText: (
         <>
           {" "}
-          Foto <span className="text-purple-600">/</span> Vídeo{" "}
-          <span className="text-purple-600">/</span> Diseño
+          Foto <span className='text-purple-600'>/</span> Vídeo{" "}
+          <span className='text-purple-600'>/</span> Diseño
         </>
       ),
     },
@@ -24,8 +24,8 @@ export default function Events() {
       subText: (
         <>
           {" "}
-          Foto <span className="text-purple-600">/</span> Vídeo
-          <span className="text-purple-600">/</span> Diseño
+          Foto <span className='text-purple-600'>/</span> Vídeo
+          <span className='text-purple-600'>/</span> Diseño
         </>
       ),
     },
@@ -36,8 +36,8 @@ export default function Events() {
       subText: (
         <>
           {" "}
-          Foto <span className="text-purple-600">/</span> Vídeo
-          <span className="text-purple-600">/</span> Diseño
+          Foto <span className='text-purple-600'>/</span> Vídeo
+          <span className='text-purple-600'>/</span> Diseño
         </>
       ),
     },
@@ -48,8 +48,8 @@ export default function Events() {
       subText: (
         <>
           {" "}
-          Foto <span className="text-purple-600">/</span> Vídeo
-          <span className="text-purple-600">/</span> Diseño
+          Foto <span className='text-purple-600'>/</span> Vídeo
+          <span className='text-purple-600'>/</span> Diseño
         </>
       ),
     },
@@ -60,8 +60,8 @@ export default function Events() {
       subText: (
         <>
           {" "}
-          Foto <span className="text-purple-600">/</span> Vídeo
-          <span className="text-purple-600">/</span> Diseño
+          Foto <span className='text-purple-600'>/</span> Vídeo
+          <span className='text-purple-600'>/</span> Diseño
         </>
       ),
     },
@@ -72,8 +72,8 @@ export default function Events() {
       subText: (
         <>
           {" "}
-          Foto <span className="text-purple-600">/</span> Vídeo
-          <span className="text-purple-600">/</span> Diseño
+          Foto <span className='text-purple-600'>/</span> Vídeo
+          <span className='text-purple-600'>/</span> Diseño
         </>
       ),
     },
@@ -84,8 +84,8 @@ export default function Events() {
       subText: (
         <>
           {" "}
-          Foto <span className="text-purple-600">/</span> Vídeo
-          <span className="text-purple-600">/</span> Diseño
+          Foto <span className='text-purple-600'>/</span> Vídeo
+          <span className='text-purple-600'>/</span> Diseño
         </>
       ),
     },
@@ -96,8 +96,8 @@ export default function Events() {
       subText: (
         <>
           {" "}
-          Foto <span className="text-purple-600">/</span> Vídeo
-          <span className="text-purple-600">/</span> Diseño
+          Foto <span className='text-purple-600'>/</span> Vídeo
+          <span className='text-purple-600'>/</span> Diseño
         </>
       ),
     },
@@ -108,17 +108,41 @@ export default function Events() {
       subText: (
         <>
           {" "}
-          Foto <span className="text-purple-600">/</span> Vídeo
-          <span className="text-purple-600">/</span> Diseño
+          Foto <span className='text-purple-600'>/</span> Vídeo
+          <span className='text-purple-600'>/</span> Diseño
         </>
       ),
     },
   ];
   return (
     <div className={twMerge("  flex flex-col   ")}>
-      <span className='fixed top-10 left-10 md:text-6xl text-xl z-20 font-medium text-[#FF3C00] w-1/4 text-left  '>
-        Eventos
-      </span>
+      <div className='flex flex-col gap-1 absolute top-10 left-10'>
+        <span className='  md:text-6xl text-xl z-20  text-[#FF3C00] w-1/4 text-left  '>
+          Eventos
+        </span>
+        <span className='  md:text-6xl text-xl z-20  text-black w-1/4 text-left  '>
+          Publicidad
+        </span>
+        <span className='  md:text-6xl text-xl z-20  text-black w-1/4 text-left  '>
+          Social
+        </span>
+        <span className='  md:text-6xl text-xl z-20  text-black w-1/4 text-left  '>
+          Branded
+        </span>
+        <span className='  md:text-6xl text-xl z-20  text-black w-1/4 text-left  '>
+          Corporativo
+        </span>
+        <span className='  md:text-6xl text-xl z-20  text-black w-1/4 text-left  '>
+          Formación
+        </span>
+        <span className='  md:text-6xl text-xl z-20  text-black w-1/4 text-left  '>
+          Productos
+        </span>
+        <span className='  md:text-6xl text-xl z-20  text-black w-1/4 text-left  '>
+          Eventos
+        </span>
+      </div>
+
       <img
         src='/images/banner.png' // Dynamically set the banner image based on the section
         className='w-full h-[45vh] sticky top-0 z-[-1] object-fill'

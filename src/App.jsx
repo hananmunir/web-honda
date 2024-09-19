@@ -106,7 +106,10 @@ function App({ children }) {
       >
         <div className='flex flex-col items-end h-full pb-4 justify-between '>
           {" "}
-          <span className=' text-white flex items-center gap-3  z-[30] text-[3rem]   '>
+          <span
+            onClick={() => handleRedirect("/")}
+            className=' text-white flex items-center gap-3  z-[30] text-[3rem] cursor-pointer  '
+          >
             <img src='/images/logo.png' alt='logo' className='h-10' />
             Hondo
           </span>
@@ -115,7 +118,7 @@ function App({ children }) {
               onClick={() => setMenuOpen(false)}
               className='cursor-pointer -me-5  md:me-0'
               color={"#ffffff"}
-              size={60}
+              size={35}
               strokeWidth={1}
             />
           ) : (
@@ -123,12 +126,12 @@ function App({ children }) {
               onClick={() => setMenuOpen(true)}
               className='cursor-pointer -me-5  md:me-0'
               color={"#ffffff"}
-              size={60}
+              size={35}
               strokeWidth={1}
             />
           )}
         </div>
-        <div className='menu-container relative p-10 !z-50 h-screen text-left py-20 w-[110vw] md:w-[20vw] flex flex-col  gap-y-10 bg-[#1d1d1b] text-white text-2xl font-light'>
+        <div className='menu-container relative p-10 !z-50 h-screen md:h-[45vh] text-left py-6 w-[110vw] md:w-[20vw] flex flex-col  gap-y-3 bg-[#1d1d1b] text-white text-2xl font-light'>
           <CircleX
             className='absolute top-4 right-4 md:hidden'
             strokeWidth={1}
@@ -244,7 +247,7 @@ function App({ children }) {
 
       <div
         ref={footerRef}
-        className='text-start p-5 z-20 relative bg-white  flex  justify-end text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse '
+        className='text-start p-5 z-[60] relative bg-white  flex  justify-end text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse '
       >
         <div className='text-[#6F00FF] pt-[12%]'>
           +34662122660 <br /> Carrer de l’Esglesia 4-6, Barcelona.
@@ -265,7 +268,7 @@ function App({ children }) {
                   type='name'
                   id='name'
                   name='name'
-                  className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
+                  className='shadow-sm bg-gray-100  text-gray-900 text-sm  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
                   placeholder='Jane Doe'
                   required
                 />
@@ -281,7 +284,7 @@ function App({ children }) {
                   type='email'
                   name='email'
                   id='email'
-                  className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
+                  className='shadow-sm bg-gray-100  text-gray-900 text-sm  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
                   placeholder='name@gmail.com'
                   required
                 />
@@ -297,7 +300,7 @@ function App({ children }) {
                   type='text'
                   name='phone'
                   id='phone'
-                  className='block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
+                  className='block p-3 w-full text-sm text-gray-900 bg-gray-100   shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
                   placeholder='Your Phone Number'
                   required
                 />
@@ -313,16 +316,16 @@ function App({ children }) {
                   id='message'
                   name='message'
                   rows='6'
-                  className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'
+                  className='block p-2.5 w-full text-sm text-gray-900 bg-gray-100  shadow-sm  focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'
                   placeholder='Leave a comment...'
                 ></textarea>
               </div>
               <button
                 type='submit'
                 disabled={loading}
-                className='py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#6F00FF]  sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 disabled:opacity-70'
+                className='py-3 px-5 text-sm font-medium text-center text-white  bg-[#FF3C00]  sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 disabled:opacity-70'
               >
-                Send message
+                Send message {">"}
               </button>
             </form>
           </div>
