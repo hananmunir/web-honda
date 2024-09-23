@@ -33,7 +33,7 @@ export default function Home({ setSelectedOption }) {
           loop
           muted
           playsInline
-          className='w-full h-[45vh] sticky top-0 z-[-1] object-fill'
+          className='w-full h-[45vh] sticky top-0 z-[-1] object-cover'
         >
           <source src='/video/header.mp4' type='video/mp4' />
         </video>

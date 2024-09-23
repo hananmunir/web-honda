@@ -149,7 +149,7 @@ export default function Agency() {
         alt='Section Banner'
       />
       <div className=' h-full md:w-2/4 p-4  md:text-right flex flex-col self-end gap-2'>
-        <h1 className='header-text'> Vídeo, Foto y Animación</h1>
+        <h1 className='header-text'> Vídeo, Foto y Animación </h1>
         <p className='description-text mt-2'>
           Este proyecto impulsado por el Museo Agbar de las
           <br />

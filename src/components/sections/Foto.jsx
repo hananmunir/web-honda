@@ -3,17 +3,8 @@ import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
 import Carousel from "../shared/Carousel";
+import { fotoProjects as projects } from "../../assets/portfolios";
 export default function Foto({ count }) {
-  const projects = [
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-    },
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-    },
-  ];
   return (
     <div className={twMerge("h-full py-24    w-screen flex flex-col   ")}>
       <div className=' foto h-full w-[70%] md:w-2/4 p-4  text-right flex flex-col self-end gap-2'>

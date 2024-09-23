@@ -1,8 +1,14 @@
 import React, { useEffect } from "react";
-import { PlusCircle } from "lucide-react";
+import { portfolios } from "../assets/portfolios";
 import { twMerge } from "tailwind-merge";
+import { useSearchParams } from "react-router-dom";
 
 export default function Project() {
+  const [searchParams] = useSearchParams();
+  const title = searchParams.get("title")?.toLowerCase()?.replaceAll(" ", "-");
+  const project = portfolios[title];
+  console.log(project);
+
   useEffect(() => {
     const container = document.querySelector(".portfilio-section");
     container.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -21,19 +27,14 @@ export default function Project() {
         Portfolio
       </span>
       <img
-        src='/images/project/activa/banner.jpg' // Dynamically set the banner image based on the section
+        src={project.headerImage} // Dynamically set the banner image based on the section
         className='w-full h-[45vh] sticky top-0 z-[-1] object-fill'
         alt='Section Banner'
       />
       <div className=' h-full pt-10 md:w-2/4 p-4 px-10   md:text-right flex flex-col self-end gap-2'>
-        <h1 className='header-text'> Aula Activa H2O</h1>
-        <h1 className='subheader-text'> Museo Agbar</h1>
-        <p className='description-text mt-2'>
-          Este proyecto impulsado por el Museo Agbar de las Aguas, ofrece
-          recursos digitales para aprender sobre cultivo, sostenibilidad y
-          meteorología. El Aula Activa es un aula al que acceder desde la web
-          del Museo Agbar y así mirar los cursos de interés para el usuario.
-        </p>
+        <h1 className='header-text'>{project.title}</h1>
+        <h1 className='subheader-text'> {project.subTitle}</h1>
+        <p className='description-text mt-2'>{project.description}</p>
         <span className='showcase-text my-4'>
           {" "}
           Foto <span className='text-[#6F00FF]'>/</span> Vídeo{" "}
@@ -42,37 +43,33 @@ export default function Project() {
       </div>
 
       <img
-        src='/images/project/activa/sec-banner.jpg'
+        src={project.secBanner}
         alt='dummy img for now'
         className='object-cover md:h-[80vh] w-full'
       />
       <div className='flex  justify-end py-16 flex-col md:flex-row gap-4 md:gap-0'>
         <div className='flex flex-col gap-1 me-auto px-4 md:px-0 md:ms-20 text-left md:w-1/4'>
-          <span className='subheader-text text-4xl'>Los recursos</span>
-          <span className='description-text text-xl'>
-            Para poner en marcha esta iniciativa,
+          <span className='subheader-text text-4xl'>
+            {project.section2.title}
           </span>
+
           <span className='mt-1 description-text text-xl '>
-            creamos contenido audiovisual visualmente simple y atractivo, en
-            localizaciones escogidas con cuidado para conectar con el concepto
-            de huerto urbano. También, diseñamos la imagen que llevaría la
-            cartelería para anunciar el proyecto, así como el diseño de esta
-            sección de la web y la experiencia de usuario de la misma.
+            {project.section2.description}
           </span>
         </div>
 
         <img
-          src='/images/project/activa/section-img.jpg'
+          src={project.section2.imgSrc}
           alt='dummy img for now'
           className='object-cover md:w-2/5'
         />
       </div>
 
       <div className='h-full grid grid-cols-2 md:w-[90%]'>
-        {projects.map((project, index) => (
+        {project.projectImages.map((src, index) => (
           <div key={index} className='relative w-full h-[40vh] '>
             <img
-              src={project.imgSrc}
+              src={src}
               alt={project.title}
               className='w-full h-full object-cover'
             />

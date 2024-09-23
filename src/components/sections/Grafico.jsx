@@ -3,6 +3,7 @@ import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
 import Carousel from "../shared/Carousel";
+import { graficoProjects as projects } from "../../assets/portfolios";
 
 export default function Grafico() {
   return (
@@ -65,8 +66,13 @@ export default function Grafico() {
       {/* "Ver Todos" section */}
       <div className='w-full py-20 relative h-full '>
         <div className='  w-[80%] ms-auto z-[30] h-full grid grid-cols-2'>
-          <ImageCard title='Ray Motor' imgSrc='/images/beach.png' />
-          <ImageCard title='Sangre de Toro' imgSrc='/images/wine.png' />
+          {projects.map((project, index) => (
+            <ImageCard
+              key={index}
+              title={project.title}
+              imgSrc={project.imgSrc}
+            />
+          ))}
         </div>
       </div>
     </div>
