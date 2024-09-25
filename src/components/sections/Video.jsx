@@ -5,7 +5,7 @@ import ImageCard from "../shared/imageCard";
 import Carousel from "../shared/Carousel";
 import { videoProjects as projects } from "../../assets/portfolios";
 
-export default function Video({ count }) {
+export default function Video({ setFormOpen }) {
   return (
     <div className={twMerge("h-full py-12   w-screen  flex flex-col  ")}>
       <div className=' video h-full  w-[70%] md:w-2/4 p-4  text-right flex flex-col items-end self-end gap-2'>
@@ -20,15 +20,7 @@ export default function Video({ count }) {
           modular se adapta a cada proyecto. <br /> <br /> *Bueno, sí hay un
           límite. Descubre hasta donde podemos llegar con
         </p>
-        <span
-          className='cta-text'
-          onClick={() => {
-            const element = document.querySelector(".footer");
-            element.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        >
+        <span className='cta-text' onClick={() => setFormOpen(true)}>
           Tu presupuesto{" "}
         </span>
       </div>

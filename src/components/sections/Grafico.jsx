@@ -5,7 +5,7 @@ import ImageCard from "../shared/imageCard";
 import Carousel from "../shared/Carousel";
 import { graficoProjects as projects } from "../../assets/portfolios";
 
-export default function Grafico() {
+export default function Grafico({ setFormOpen }) {
   return (
     <div className={twMerge("h-full py-24    w-screen flex flex-col   ")}>
       <div className=' h-full grafico w-[70%] md:w-2/4 p-4  text-right flex flex-col self-end gap-2'>
@@ -22,15 +22,7 @@ export default function Grafico() {
           <br />
           No lo dudes, mándanos un briefing:
         </p>
-        <span
-          className='cta-text'
-          onClick={() => {
-            const element = document.querySelector(".footer");
-            element.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        >
+        <span className='cta-text' onClick={() => setFormOpen(true)}>
           {" "}
           ASAP{" "}
         </span>

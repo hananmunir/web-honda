@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../components/shared/imageCard";
@@ -114,8 +114,13 @@ export default function Events() {
       ),
     },
   ];
+
+  useEffect(() => {
+    const container = document.querySelector(".events-page");
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
   return (
-    <div className={twMerge("  flex flex-col   ")}>
+    <div className={twMerge("  flex flex-col events-page  ")}>
       <div className='flex flex-col gap-1 absolute top-10 left-10'>
         <span className='  md:text-6xl text-xl z-20  text-[#FF3C00] w-1/4 text-left  '>
           Eventos

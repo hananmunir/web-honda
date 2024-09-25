@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
 import Carousel from "../shared/Carousel";
 import { homeProjects as projects } from "../../assets/portfolios";
-export default function First({ count }) {
+export default function First({ setFormOpen }) {
   return (
     <div className={twMerge("h-full py-12   w-screen  flex flex-col  ")}>
       <div className=' home h-full  w-[70%] md:w-2/4 p-4  text-right flex flex-col items-end self-end gap-2'>
@@ -17,15 +17,7 @@ export default function First({ count }) {
           creativa. En el formato que neceistes. Para el miedo adecuado a tu
           audiencia. Usando toda la tecnología actual (sí, IA incluida) para:
         </p>
-        <span
-          className='cta-text'
-          onClick={() => {
-            const element = document.querySelector(".footer");
-            element.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        >
+        <span className='cta-text' onClick={() => setFormOpen(true)}>
           Potenciar tu marca
         </span>
       </div>

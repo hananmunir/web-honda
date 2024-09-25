@@ -1,7 +1,7 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-export default function Paellas({ count }) {
+export default function Paellas({ setFormOpen }) {
   return (
     <div
       className={twMerge(
@@ -20,15 +20,7 @@ export default function Paellas({ count }) {
           nosotros, lo saben: si tu proyecto lo necesita, podemos hacer hasta
           una paella
         </p>
-        <span
-          className='cta-text'
-          onClick={() => {
-            const element = document.querySelector(".footer");
-            element.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        >
+        <span className='cta-text' onClick={() => setFormOpen(true)}>
           {" "}
           Haz tu reserva{" "}
         </span>

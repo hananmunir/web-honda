@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
 import Carousel from "../shared/Carousel";
 import { fotoProjects as projects } from "../../assets/portfolios";
-export default function Foto({ count }) {
+export default function Foto({ setFormOpen }) {
   return (
     <div className={twMerge("h-full py-24    w-screen flex flex-col   ")}>
       <div className=' foto h-full w-[70%] md:w-2/4 p-4  text-right flex flex-col self-end gap-2'>
@@ -21,7 +21,10 @@ export default function Foto({ count }) {
           <br />
           Sí no estás satisfecho con lo que te ha dado Midjourney:
         </p>
-        <span className='cta-text'> Habla con nosotros </span>
+        <span className='cta-text' onClick={() => setFormOpen(true)}>
+          {" "}
+          Habla con nosotros{" "}
+        </span>
       </div>
       <div className='flex gap-6 w-full justify-end text-right flex-col-reverse md:flex-row md:items-start items-end'>
         <div className='w-3/5 px-2 md:px-0 md:w-1/5 showcase-text'>

@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ScrollMenu from "../components/ScrollMenu";
-import Reel from "../components/sections/Reel";
 import Video from "../components/sections/Video";
 import Portfolio from "../components/sections/Portfolio";
 import Equipo from "../components/sections/Equipo";
 import Contact from "../components/sections/Contact";
-import Diseno from "../components/sections/Diseno";
 import Paellas from "../components/sections/Paellas";
 import Grafico from "../components/sections/Grafico";
 import Foto from "../components/sections/Foto";
 import Wrapper from "../components/sections/Wrapper";
 import First from "../components/sections/FirstSection";
+import Popup from "../components/shared/Popup";
+import useMenuStore from "../store";
 
 const images = [
   "/images/banner.png",
@@ -25,6 +25,12 @@ const images = [
 
 export default function Home({ setSelectedOption }) {
   const [count, setCount] = useState(0);
+  const { setFormOpen } = useMenuStore();
+
+  useEffect(() => {
+    const container = document.querySelector(".home-page");
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
   return (
     <>
       {count <= 3 ? (
@@ -33,43 +39,50 @@ export default function Home({ setSelectedOption }) {
           loop
           muted
           playsInline
-          className='w-full h-[45vh] sticky top-0 z-[-1] object-cover'
+          className='w-full h-[45vh] sticky top-0 z-[-1] object-cover home-page'
         >
           <source src='/video/header.mp4' type='video/mp4' />
         </video>
       ) : (
         <img
           src={images[count]} // Dynamically set the banner image based on the section
-          className='w-full h-[45vh] sticky top-0 z-[-1] object-fill'
+          className='w-full h-[45vh] sticky top-0 z-[-1] object-fill home-page'
           alt='Section Banner'
         />
       )}
+      <Popup />
 
       <ScrollMenu count={count} setCount={setCount} />
       <Wrapper className={"home"} count={0} setCount={setCount}>
-        <First />
+        <First setFormOpen={setFormOpen} />
       </Wrapper>
       <Wrapper count={1} setCount={setCount} className={"video"}>
-        <Video setSelectedOption={setSelectedOption} />
+        <Video
+          setFormOpen={setFormOpen}
+          setSelectedOption={setSelectedOption}
+        />
       </Wrapper>
       <Wrapper count={2} setCount={setCount} className={"foto"}>
-        <Foto setSelectedOption={setSelectedOption} />
+        <Foto setFormOpen={setFormOpen} setSelectedOption={setSelectedOption} />
       </Wrapper>
       <Wrapper count={3} setCount={setCount} className={"grafico"}>
-        <Grafico />
+        <Grafico setFormOpen={setFormOpen} />
       </Wrapper>
 
       <Wrapper count={4} setCount={setCount} className={"portfolio"}>
-        <Portfolio setSelectedOption={setSelectedOption} />
+        <Portfolio
+          setFormOpen={setFormOpen}
+          setSelectedOption={setSelectedOption}
+        />
       </Wrapper>
       <Wrapper count={5} setCount={setCount} className={"equipo"}>
-        <Equipo />
+        <Equipo setFormOpen={setFormOpen} />
       </Wrapper>
       <Wrapper count={6} setCount={setCount} className={"paellas"}>
-        <Paellas />
+        <Paellas setFormOpen={setFormOpen} />
       </Wrapper>
       <Wrapper count={7} setCount={setCount} className={"contact"}>
-        <Contact />
+        <Contact setFormOpen={setFormOpen} />
       </Wrapper>
     </>
   );

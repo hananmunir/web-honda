@@ -5,7 +5,6 @@ export default function Wrapper({ children, count, setCount, className }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    console.log(className);
     const container = document.querySelector(`.${className}`);
 
     if (!container) return;

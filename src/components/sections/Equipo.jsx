@@ -17,7 +17,7 @@ const TeamCard = ({ img, name, role }) => {
   );
 };
 
-export default function Equipo({ count }) {
+export default function Equipo({ setFormOpen }) {
   return (
     <div className={twMerge("h-full py-12  w-screen  flex flex-col ")}>
       <div className=' equipo  w-[70%] md:w-2/4 p-4 h-full text-right flex flex-col self-end gap-2'>
@@ -31,7 +31,10 @@ export default function Equipo({ count }) {
           contamos con una amplia red de profesionales que nos permiten
           adaptarnos a cualqueir tipo de producción.
         </p>
-        <span className='cta-text'> Pide por esa boquita</span>
+        <span className='cta-text' onClick={() => setFormOpen(true)}>
+          {" "}
+          Pide por esa boquita
+        </span>
       </div>
       <div className=' grid gap-y-3 grid-cols-1 md:grid-cols-2  w-[65%] md:w-[70%] ms-auto '>
         <TeamCard

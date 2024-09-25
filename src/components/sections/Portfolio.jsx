@@ -5,7 +5,7 @@ import ImageCard from "../shared/imageCard";
 import useMenuStore from "../../store/index";
 import { portFolioProjects as projects } from "../../assets/portfolios";
 
-export default function Portfolio({ setSelectedOption }) {
+export default function Portfolio({ setSelectedOption, setFormOpen }) {
   const [selectedCategory, setSelectedCategory] = useState("foto");
   const { menuOpen } = useMenuStore();
 
@@ -27,15 +27,7 @@ export default function Portfolio({ setSelectedOption }) {
           búsqueda del cliente perfecto, que nos de la posibilidad de explotar
           todo nuestro potencial. ¿Serás tú?
         </p>
-        <span
-          className='cta-text'
-          onClick={() => {
-            const element = document.querySelector(".footer");
-            element.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        >
+        <span className='cta-text' onClick={() => setFormOpen(true)}>
           {" "}
           Soy cliente perfecto
         </span>
