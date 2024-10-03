@@ -32,7 +32,7 @@ export default function ContactForm() {
     }
   };
   return (
-    <div className='py-8 lg:pt-16 px-4 mx-auto max-w-screen-md'>
+    <div className='py-8   mx-auto max-w-screen-m '>
       <form onSubmit={handleOnSubmit} action='#' className='space-y-2 '>
         <div>
           <input
@@ -40,7 +40,7 @@ export default function ContactForm() {
             id='name'
             name='name'
             className='shadow-sm bg-gray-100  text-gray-900 text-sm  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
-            placeholder='Jane Doe'
+            placeholder='Nombre y apellidos'
             required
           />
         </div>
@@ -50,7 +50,7 @@ export default function ContactForm() {
             name='email'
             id='email'
             className='shadow-sm bg-gray-100  text-gray-900 text-sm  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
-            placeholder='name@gmail.com'
+            placeholder='Email'
             required
           />
         </div>
@@ -60,7 +60,7 @@ export default function ContactForm() {
             name='phone'
             id='phone'
             className='block p-3 w-full text-sm text-gray-900 bg-gray-100   shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'
-            placeholder='Your Phone Number'
+            placeholder='Teléfono'
             required
           />
         </div>
@@ -70,7 +70,7 @@ export default function ContactForm() {
             name='message'
             rows='6'
             className='block p-2.5 w-full text-sm text-gray-900 bg-gray-100  shadow-sm  focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'
-            placeholder='Leave a comment...'
+            placeholder='Cuéntanos algo'
           ></textarea>
         </div>
         <button
@@ -78,7 +78,7 @@ export default function ContactForm() {
           disabled={loading}
           className='py-3  text-sm font-medium text-center  text-[#FF3C00]  sm:w-fit hover:text-[#FF3C00]/80 ring-none outline-none disabled:opacity-70'
         >
-          Send message {">"}
+          Enviar {">"}
         </button>
       </form>
     </div>

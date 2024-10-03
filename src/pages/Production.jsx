@@ -2,126 +2,27 @@ import React, { useEffect } from "react";
 import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../components/shared/imageCard";
+import { portfolios } from "../assets/portfolios";
 
 export default function Production() {
-  const projects = [
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-      titleClassname: "text-[1rem] leading-[20px] text-left",
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo{" "}
-          <span className='text-purple-600'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-      titleClassname: "text-[1rem] leading-[20px] text-left",
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo
-          <span className='text-purple-600'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-      titleClassname: "text-[1rem] leading-[20px] text-left",
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo
-          <span className='text-purple-600'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-      titleClassname: "text-[1rem] leading-[20px] text-left",
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo
-          <span className='text-purple-600'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-      titleClassname: "text-[1rem] leading-[20px] text-left",
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo
-          <span className='text-purple-600'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-      titleClassname: "text-[1rem] leading-[20px] text-left",
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo
-          <span className='text-purple-600'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-      titleClassname: "text-[1rem] leading-[20px] text-left",
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo
-          <span className='text-purple-600'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-      titleClassname: "text-[1rem] leading-[20px] text-left",
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo
-          <span className='text-purple-600'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-      titleClassname: "text-[1rem] leading-[20px] text-left ",
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-purple-600'>/</span> Vídeo
-          <span className='text-purple-600'>/</span> Diseño
-        </>
-      ),
-    },
-  ];
+  const match = Object.keys(portfolios).map((key) => {
+    if (portfolios[key].pages.includes("production"))
+      return {
+        ...portfolios[key],
+        imgSrc: portfolios[key].headerImage,
+      };
 
+    return null;
+  });
+
+  const projects = match.filter((item) => item);
   useEffect(() => {
     const container = document.querySelector(".production-page");
     container.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
   return (
-    <div className={twMerge("   flex flex-col  production ")}>
-      <div className='flex flex-col gap-1 absolute top-10 left-10'>
+    <div className={twMerge("   flex flex-col  production-page ")}>
+      <div className='flex flex-col gap-1 absolute top-10  left-5 md:left-10'>
         <span className='  md:text-6xl text-xl z-20  text-[#FF3C00] w-1/4 text-left  '>
           Producción Audiovisual
         </span>
@@ -214,8 +115,14 @@ export default function Production() {
               key={index}
               title={project.title}
               imgSrc={project.imgSrc}
-              titleClassname={project.titleClassname}
-              subText={project.subText}
+              titleClassname={"text-[1rem] leading-[20px] text-left"}
+              subText={
+                <>
+                  {" "}
+                  Foto <span className='text-purple-600'>/</span> Vídeo
+                  <span className='text-purple-600'>/</span> Diseño
+                </>
+              }
             />
           ))}
         </div>

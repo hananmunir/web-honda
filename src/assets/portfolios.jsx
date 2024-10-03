@@ -20,11 +20,14 @@ export const portfolios = {
       "/images/project/activa/p-3.jpg",
       "/images/project/activa/p-4.jpg",
     ],
+    sections: ["foto", "video", "home", "grafico", "portfolio"],
+    pages: ["agency", "culture", "events", "production", "studio"],
+    type: "foto",
   },
   "sangre-de-toro": {
     headerImage: "/images/project/sangreDeToro/banner.jpg",
-    title: "Fotografía web y catálogo",
-    subTitle: "Sangre de Toro",
+    title: "Sangre de Toro",
+    subTitle: "Fotografía web y catálogo",
     description:
       "Este proyecto busca promocionar la nueva etiqueta de la marca de la manera que más la caracteriza, entre amigos, parejas y sobremesas que celebran las mejores ocasiones.",
     secBanner: "/images/project/sangreDeToro/sec-banner.jpg",
@@ -43,238 +46,33 @@ export const portfolios = {
       "/images/project/sangreDeToro/p-4.jpg",
       "/images/project/sangreDeToro/p-5.jpg",
     ],
+    sections: ["foto", "video", "home", "grafico", "portfolio"],
+    pages: ["agency", "culture", "events", "production", "studio"],
+    type: "video",
   },
-};
+  "ray-motors": {
+    headerImage: "/images/project/rayMotors/banner.jpg",
+    title: "Ray Motors",
+    subTitle: "Contenido para redes",
+    description:
+      "Ray Electric Motors nace como una solución de movilidad urbana sostenible. Velocidad, potencia, comodidad y diseño.",
+    secBanner: "/images/project/rayMotors/sec-banner.jpg",
 
-export const homeProjects = [
-  {
-    title: "Ray Motor",
-    imgSrc: "/images/beach.png",
+    section2: {
+      title: "Estilo urbano y sostenible",
+
+      description:
+        "Estas fotos para redes sociales cubren el uso urbano de las motocicletas eléctricas ray, tanto funcionales como estéticas, en ambientes de Barcelona reconocibles. Las ciudades necesitan un vehículo eléctrico que facilite la movilidad y este producto innovador es una opción muy atractiva para los más cosmopolitas.",
+      imgSrc: "/images/project/rayMotors/section-img.jpg",
+    },
+    projectImages: [
+      "/images/project/rayMotors/p-1.jpg",
+      "/images/project/rayMotors/p-2.jpg",
+      "/images/project/rayMotors/p-3.jpg",
+      "/images/project/rayMotors/p-4.jpg",
+    ],
+    sections: ["foto", "video", "home", "grafico", "portfolio"],
+    pages: ["agency", "culture", "events", "production", "studio"],
+    type: "video",
   },
-  {
-    title: "Sangre de Toro",
-    imgSrc: "/images/wine.png",
-  },
-];
-
-export const fotoProjects = [
-  {
-    title: "Ray Motor",
-    imgSrc: "/images/beach.png",
-  },
-  {
-    title: "Sangre de Toro",
-    imgSrc: "/images/wine.png",
-  },
-];
-
-export const graficoProjects = [
-  {
-    title: "Ray Motor",
-    imgSrc: "/images/beach.png",
-  },
-  {
-    title: "Sangre de Toro",
-    imgSrc: "/images/wine.png",
-  },
-];
-
-export const videoProjects = [
-  {
-    title: "Ray Motor",
-    imgSrc: "/images/beach.png",
-  },
-  {
-    title: "Sangre de Toro",
-    imgSrc: "/images/wine.png",
-  },
-];
-
-export const portFolioProjects = {
-  foto: [
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo{" "}
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-  ],
-  video: [
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-  ],
-  diseno: [
-    {
-      title: "Sangre de Toro",
-      imgSrc: "/images/wine.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-    {
-      title: "Ray Motor",
-      imgSrc: "/images/beach.png",
-
-      subText: (
-        <>
-          {" "}
-          Foto <span className='text-[#6F00FF]'>/</span> Vídeo
-          <span className='text-[#6F00FF]'>/</span> Diseño
-        </>
-      ),
-    },
-  ],
 };

@@ -63,14 +63,14 @@ function App({ children }) {
     <div
       onClick={onClickOutsideMenu}
       className={twMerge(
-        "h-screen relative hide-scrollbar w-screen overflow-x-hidden  overflow-y-scroll dm-sans ",
+        "h-full md:h-screen fixed hide-scrollbar w-screen overflow-x-hidden  overflow-y-scroll dm-sans ",
         selectedOption !== "home" && "h-full"
       )}
     >
       <div
         ref={menuRef}
         className={twMerge(
-          "fixed z-30 top-0 menu-container transition-all duration-300 ease-in-out right-0 translate-x-[100vw] md:translate-x-[20vw]  h-[45vh] flex gap-8 md:gap-5  ",
+          "fixed z-30 top-0 menu-container transition-all duration-300 ease-in-out right-0 translate-x-[105vw] md:translate-x-[20vw]  h-[45vh] flex gap-8 md:gap-5  ",
           menuOpen && "-translate-x-[0vw] md:translate-x-0 z-[80]"
         )}
       >
@@ -78,9 +78,9 @@ function App({ children }) {
           {" "}
           <span
             onClick={() => handleRedirect("/")}
-            className=' text-white flex items-center gap-3  z-[30] text-[3rem] cursor-pointer  '
+            className=' text-white flex items-center gap-3  z-[30] text-2xl md:text-[3rem] cursor-pointer  pt-4 md:pt-0'
           >
-            <img src='/images/logo.png' alt='logo' className='h-10' />
+            <img src='/images/logo.png' alt='logo' className='h-6 md:h-10' />
             Hondo
           </span>
           {menuOpen ? (
@@ -101,7 +101,7 @@ function App({ children }) {
             />
           )}
         </div>
-        <div className='menu-container relative p-10 !z-50 h-screen md:h-[45vh] text-left py-6 w-[110vw] md:w-[20vw] flex flex-col  justify-around bg-[#1d1d1b] text-white text-2xl font-light'>
+        <div className='menu-container relative p-10 !z-50 h-screen md:h-[45vh] text-left md:py-6 w-[110vw] md:w-[20vw] flex flex-col  justify-around bg-[#1d1d1b] text-white text-2xl font-light pb-40 overflow-y-scroll hide-scrollbar'>
           <CircleX
             className='absolute top-4 right-4 md:hidden'
             strokeWidth={1}
@@ -218,14 +218,19 @@ function App({ children }) {
 
       <div
         ref={footerRef}
-        className='text-start p-5 z-[60] relative  flex  justify-end text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse '
+        className='text-start bg-white p-5 z-[60] relative  flex  justify-end text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse pt-20  gap-5'
       >
         <div className='text-[#6F00FF] pt-[12%]'>
           +34662122660 <br /> Carrer de l’Esglesia 4-6, Barcelona.
           <br />
           hola@hondostudio.com
         </div>
-        <section className=' dark:bg-gray-900 md:w-3/5 '>
+        <section className=' dark:bg-gray-900 md:w-3/5 px-4 '>
+          <div className='w-full  flex items-end justify-end text-right '>
+            <span className=' header-text   '>
+              Ahora es tu turno <br /> ¡Cuéntanos algo!
+            </span>
+          </div>
           <ContactForm />
         </section>
       </div>

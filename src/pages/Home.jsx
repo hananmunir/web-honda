@@ -33,7 +33,7 @@ export default function Home({ setSelectedOption }) {
   }, []);
   return (
     <>
-      {count <= 3 ? (
+      {count <= 4 ? (
         <video
           autoPlay
           loop

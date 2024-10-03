@@ -3,11 +3,22 @@ import { CircleX, PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
 import useMenuStore from "../../store/index";
-import { portFolioProjects as projects } from "../../assets/portfolios";
+import { portfolios } from "../../assets/portfolios";
 
 export default function Portfolio({ setSelectedOption, setFormOpen }) {
   const [selectedCategory, setSelectedCategory] = useState("foto");
   const { menuOpen } = useMenuStore();
+  const match = Object.keys(portfolios).map((key) => {
+    if (portfolios[key].sections.includes("portfolio"))
+      return {
+        ...portfolios[key],
+        imgSrc: portfolios[key].headerImage,
+      };
+
+    return null;
+  });
+
+  const projects = match.filter((item) => item);
 
   const handleOnClick = (name) => {
     setSelectedOption("portfolio");
@@ -110,19 +121,32 @@ export default function Portfolio({ setSelectedOption, setFormOpen }) {
         </div>
       </div>
       <div className=' py-20 pt-4 md:pt-10 relative  w-[80%] ms-auto'>
-        <div className='  w-full text-left leading-[80px] z-[30] grid grid-cols-2 md:grid-cols-3 gap-y-4 md:gap-y-10'>
-          {projects[selectedCategory].map((project, index) => (
-            <ImageCard
-              key={index}
-              title={project.title}
-              imgSrc={project.imgSrc}
-              titleClassname={
-                "text-sm md:text-[2.5rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[4rem] leading-[25px] md:leading-[40px] md:leading-[70px] xl:leading-[70px] 2xl:leading-[70px] text-left"
-              }
-              subText={project.subText}
-              onClick={handleOnClick}
-            />
-          ))}
+        <div
+          style={{ direction: "rtl" }}
+          className='  ml-auto w-full text-left leading-[80px] z-[30] grid grid-cols-2 md:grid-cols-3 gap-y-4 md:gap-y-10'
+        >
+          {projects
+            .filter(
+              (project) => project.type.toLowerCase() === selectedCategory
+            )
+            .map((project, index) => (
+              <ImageCard
+                key={index}
+                title={project.title}
+                imgSrc={project.imgSrc}
+                subText={
+                  <>
+                    {" "}
+                    Foto <span className='text-purple-600'>/</span> Vídeo
+                    <span className='text-purple-600'>/</span> Diseño
+                  </>
+                }
+                titleClassname={
+                  "text-sm md:text-[2.5rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[4rem] leading-[25px] md:leading-[40px] md:leading-[70px] xl:leading-[70px] 2xl:leading-[70px] text-left"
+                }
+                onClick={handleOnClick}
+              />
+            ))}
         </div>
       </div>
     </div>

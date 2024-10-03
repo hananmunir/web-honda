@@ -14,7 +14,7 @@ export default function Popup() {
         formOpen && "opacity-100 pointer-events-auto"
       )}
     >
-      <div className='bg-white p-8 relative h-fit w-2/4'>
+      <div className='bg-white p-8 relative h-fit w-[95%] md:w-2/4'>
         <X
           onClick={() => setFormOpen(false)}
           className='absolute top-4 left-4 cursor-pointer '

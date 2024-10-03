@@ -39,7 +39,13 @@ export default function Equipo({ setFormOpen }) {
       <div className=' grid gap-y-3 grid-cols-1 md:grid-cols-2  w-[65%] md:w-[70%] ms-auto '>
         <TeamCard
           img='/images/img1.jpg'
-          name='Cristian Jiménez'
+          name={
+            <span>
+              Cristian
+              <br />
+              Jiménez
+            </span>
+          }
           role={
             <span>
               Director Creativo <br />& Youtuber
@@ -48,7 +54,13 @@ export default function Equipo({ setFormOpen }) {
         />
         <TeamCard
           img='/images/img-2.jpg'
-          name='Bego Alarcón'
+          name={
+            <span>
+              Bego
+              <br />
+              Alarcón
+            </span>
+          }
           role={
             <span>
               Project Manager <br />& Escultora conceptual
@@ -57,7 +69,13 @@ export default function Equipo({ setFormOpen }) {
         />
         <TeamCard
           img='/images/img3.jpg'
-          name='Gus Arens'
+          name={
+            <span>
+              Gus
+              <br />
+              Arens
+            </span>
+          }
           role={
             <span>
               Productor <br />& Guitarrista
@@ -66,7 +84,13 @@ export default function Equipo({ setFormOpen }) {
         />
         <TeamCard
           img='/images/img4.jpg'
-          name='Anto Gentile'
+          name={
+            <span>
+              Anto
+              <br />
+              Gentile
+            </span>
+          }
           role={
             <span>
               Director de Fotografía <br />& Pintor

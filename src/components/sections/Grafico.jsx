@@ -3,9 +3,20 @@ import { PlusCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import ImageCard from "../shared/imageCard";
 import Carousel from "../shared/Carousel";
-import { graficoProjects as projects } from "../../assets/portfolios";
+import { portfolios } from "../../assets/portfolios";
 
 export default function Grafico({ setFormOpen }) {
+  const match = Object.keys(portfolios).map((key) => {
+    if (portfolios[key].sections.includes("grafico"))
+      return {
+        ...portfolios[key],
+        imgSrc: portfolios[key].headerImage,
+      };
+
+    return null;
+  });
+
+  const projects = match.filter((item) => item);
   return (
     <div className={twMerge("h-full py-24    w-screen flex flex-col   ")}>
       <div className=' h-full grafico w-[70%] md:w-2/4 p-4  text-right flex flex-col self-end gap-2'>
@@ -57,7 +68,10 @@ export default function Grafico({ setFormOpen }) {
       </div>
       {/* "Ver Todos" section */}
       <div className='w-full py-20 relative h-full '>
-        <div className='  w-[80%] ms-auto z-[30] h-full grid grid-cols-2'>
+        <div
+          style={{ direction: "rtl" }}
+          className='  w-[80%] ml-auto  z-[30] h-full grid grid-cols-2'
+        >
           {projects.map((project, index) => (
             <ImageCard
               key={index}

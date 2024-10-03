@@ -13,7 +13,6 @@ export default function Wrapper({ children, count, setCount, className }) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("Intersecting", count, className);
             setCount(count);
           }
         });

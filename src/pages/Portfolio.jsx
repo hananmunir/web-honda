@@ -7,18 +7,12 @@ export default function Project() {
   const [searchParams] = useSearchParams();
   const title = searchParams.get("title")?.toLowerCase()?.replaceAll(" ", "-");
   const project = portfolios[title];
-  console.log(project);
 
   useEffect(() => {
     const container = document.querySelector(".portfilio-section");
     container.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
-  const projects = [
-    { title: "Sangre del Toro", imgSrc: "/images/project/activa/p-1.jpg" },
-    { title: "Ray Motor", imgSrc: "/images/project/activa/p-2.jpg" },
-    { title: "Sangre del Toro", imgSrc: "/images/project/activa/p-3.jpg" },
-    { title: "Ray Motor", imgSrc: "/images/project/activa/p-4.jpg" },
-  ];
+
   return (
     <div
       className={twMerge("portfilio-section  dm-sans  w-full flex flex-col ")}

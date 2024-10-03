@@ -23,6 +23,7 @@
 
 @layer components {
 
+  /* xs, sm, lg, xl,2xl,3xl */
   .header-text {
     @apply text-3xl md:text-5xl text-[#6F00FF] md:leading-[55px];
   }
