@@ -63,7 +63,7 @@ function App({ children }) {
     <div
       onClick={onClickOutsideMenu}
       className={twMerge(
-        "h-full md:h-screen fixed hide-scrollbar w-screen overflow-x-hidden  overflow-y-scroll dm-sans ",
+        "h-full parent md:h-screen fixed hide-scrollbar w-screen overflow-x-hidden  overflow-y-scroll dm-sans ",
         selectedOption !== "home" && "h-full"
       )}
     >

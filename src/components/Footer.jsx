@@ -17,14 +17,14 @@ export default function Footer() {
           © Hondo Creative Productio S.L.
         </span>
 
-        <div className='flex mt-4  flex-col text-[#FF3C00] text-center md:items-start font-semibold text-sm md:text-base'>
+        <div className='flex mt-4 gap-1  md:flex-row text-[#FF3C00] text-center md:items-start font-semibold text-sm md:text-base'>
           <span>Política de cookies</span>
           <span>Aviso legal</span>
         </div>
       </div>
       <div className='col-span-12 md:col-span-8 md:w-3/4 md:ms-auto flex flex-col gap-3 md:gap-6 items-center md:items-end '>
         <span className='header-text  text-[#6F00FF]'>Algo más</span>
-        <div className='md:text-end description-text text-white text-base '>
+        <div className='text-end description-text text-white text-base  '>
           Nos gusta explicarnos a nuestra manera, pero también nos gusta que
           cuando busques una agencia creativa puedas encontrarnos. Por eso en
           este texto ponemos las palabras clave para que Google nos lleve a ti
