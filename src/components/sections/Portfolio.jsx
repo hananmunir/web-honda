@@ -6,7 +6,7 @@ import useMenuStore from "../../store/index";
 import { portfolios } from "../../assets/portfolios";
 
 export default function Portfolio({ setSelectedOption, setFormOpen }) {
-  const [selectedCategory, setSelectedCategory] = useState("foto");
+  const [selectedCategory, setSelectedCategory] = useState("video");
   const { menuOpen } = useMenuStore();
   const match = Object.keys(portfolios).map((key) => {
     if (portfolios[key].sections.includes("portfolio"))
@@ -51,29 +51,6 @@ export default function Portfolio({ setSelectedOption, setFormOpen }) {
         )}
       >
         <div
-          onClick={() => setSelectedCategory("foto")}
-          className={twMerge(
-            "flex gap-1.5 cursor-pointer  justify-center items-center",
-            selectedCategory === "foto" && "text-[#FF3C00]"
-          )}
-        >
-          <div className=' md:hidden'>
-            {selectedCategory === "foto" ? (
-              <PlusCircle size={20} strokeWidth={1} color='#FF3C00' />
-            ) : (
-              <CircleX size={20} strokeWidth={1} color='lightgray' />
-            )}
-          </div>
-          <div className='hidden md:block'>
-            {selectedCategory === "foto" ? (
-              <PlusCircle size={30} strokeWidth={1} color='#FF3C00' />
-            ) : (
-              <CircleX size={30} strokeWidth={1} color='lightgray' />
-            )}
-          </div>
-          <span>Foto</span>
-        </div>
-        <div
           onClick={() => setSelectedCategory("video")}
           className={twMerge(
             "flex gap-1.5 cursor-pointer  justify-center items-center",
@@ -96,6 +73,30 @@ export default function Portfolio({ setSelectedOption, setFormOpen }) {
           </div>
           <span>Video</span>
         </div>
+        <div
+          onClick={() => setSelectedCategory("foto")}
+          className={twMerge(
+            "flex gap-1.5 cursor-pointer  justify-center items-center",
+            selectedCategory === "foto" && "text-[#FF3C00]"
+          )}
+        >
+          <div className=' md:hidden'>
+            {selectedCategory === "foto" ? (
+              <PlusCircle size={20} strokeWidth={1} color='#FF3C00' />
+            ) : (
+              <CircleX size={20} strokeWidth={1} color='lightgray' />
+            )}
+          </div>
+          <div className='hidden md:block'>
+            {selectedCategory === "foto" ? (
+              <PlusCircle size={30} strokeWidth={1} color='#FF3C00' />
+            ) : (
+              <CircleX size={30} strokeWidth={1} color='lightgray' />
+            )}
+          </div>
+          <span>Foto</span>
+        </div>
+
         <div
           onClick={() => setSelectedCategory("diseno")}
           className={twMerge(

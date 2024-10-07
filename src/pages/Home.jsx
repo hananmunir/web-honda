@@ -47,7 +47,7 @@ export default function Home({ setSelectedOption }) {
       ) : (
         <img
           src={images[count]} // Dynamically set the banner image based on the section
-          className='w-full h-[35vh] md:h-[45vh] sticky top-0 z-[-1] object-fill home-page'
+          className='w-full h-[35vh] md:h-[45vh] sticky top-0 z-[-1] object-cover home-page'
           alt='Section Banner'
         />
       )}
