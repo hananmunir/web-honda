@@ -15,7 +15,7 @@ const items = [
 const ScrollMenu = ({ count, setCount }) => {
   console.log(count);
   return (
-    <div className='fixed top-[39.5vh] md:top-[34vh] 2xl:top-[36vh] z-10 left-5 md:left-10 '>
+    <div className='fixed top-[29.5vh] md:top-[34vh] 2xl:top-[36vh] z-10 left-5 md:left-10  pointer-events-none'>
       <div
         style={{
           transform: `translateY(calc(-${count * 12.7}%)`,

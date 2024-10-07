@@ -49,7 +49,7 @@ export default function Grafico({ setFormOpen }) {
           <span className='text-purple-600'>/</span> Visuales{" "}
           <span className='text-purple-600'>/</span> Packaging{" "}
         </div>
-        <div className='w-[50vw] h-full '>
+        <div className='w-[70vw] md:w-[50vw] h-full '>
           <Carousel
             images={[
               "/images/grafico/1.jpg",

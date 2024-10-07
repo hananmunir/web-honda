@@ -70,7 +70,7 @@ function App({ children }) {
       <div
         ref={menuRef}
         className={twMerge(
-          "fixed z-30 top-0 menu-container transition-all duration-300 ease-in-out right-0 translate-x-[105vw] md:translate-x-[20vw]  h-[45vh] flex gap-8 md:gap-5  ",
+          "fixed z-30 top-0 menu-container transition-all duration-300 ease-in-out right-0 translate-x-[105vw] md:translate-x-[20vw]  h-[35vh] md:h-[45vh] flex gap-8 md:gap-5  ",
           menuOpen && "-translate-x-[0vw] md:translate-x-0 z-[80]"
         )}
       >

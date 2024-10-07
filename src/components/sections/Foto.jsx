@@ -54,7 +54,7 @@ export default function Foto({ setFormOpen }) {
           </span> Estilsimo <span className='text-[#6F00FF]'>/</span> Home
           Economist <span className='text-[#6F00FF]'>/</span> Scouting
         </div>
-        <div className='w-[50vw] h-[250px] md:h-[50vh]'>
+        <div className='w-[70vw] md:w-[50vw] h-[250px] md:h-[50vh]'>
           <Carousel
             images={[
               "/images/foto/1.jpg",

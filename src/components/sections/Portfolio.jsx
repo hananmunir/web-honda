@@ -46,7 +46,7 @@ export default function Portfolio({ setSelectedOption, setFormOpen }) {
       {/* Projects grid section */}
       <div
         className={twMerge(
-          "text-black text-xl md:text-4xl flex justify-end gap-5 px-4 md:px-10 text  mt-5 md:mt-10   ",
+          "text-black text-xl md:text-4xl flex justify-end gap-3 md:gap-5 px-4 md:px-10 text  mt-5 ml-auto md:mt-10  max-w-[70vw] md:max-w-screen flex-wrap  ",
           !menuOpen && "z-50"
         )}
       >

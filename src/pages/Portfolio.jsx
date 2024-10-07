@@ -22,7 +22,7 @@ export default function Project() {
       </span>
       <img
         src={project.headerImage} // Dynamically set the banner image based on the section
-        className='w-full h-[45vh] sticky top-0 z-[-1] object-fill'
+        className='w-full h-[35vh] md:h-[45vh] sticky top-0 z-[-1] object-fill'
         alt='Section Banner'
       />
       <div className=' h-full pt-10 md:w-2/4 p-4 px-10   md:text-right flex flex-col self-end gap-2'>
