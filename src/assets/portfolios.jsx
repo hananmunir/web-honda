@@ -1,5 +1,5 @@
 export const portfolios = {
-  "ray-motor": {
+  "aula-activa-h2o": {
     headerImage: "/images/project/activa/banner.jpg",
     title: "Aula Activa H2O",
     subTitle: "Museo Agbar",
