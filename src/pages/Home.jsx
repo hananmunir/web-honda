@@ -32,7 +32,7 @@ export default function Home({ setSelectedOption }) {
     container.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
   return (
-    <>
+    <div>
       {count <= 4 ? (
         <video
           autoPlay
@@ -85,6 +85,6 @@ export default function Home({ setSelectedOption }) {
       <Wrapper count={7} setCount={setCount} className={"contact"}>
         <Contact setFormOpen={setFormOpen} />
       </Wrapper>
-    </>
+    </div>
   );
 }

@@ -218,7 +218,7 @@ function App({ children }) {
 
       <div
         ref={footerRef}
-        className='text-start bg-white p-5 z-[60] relative  flex  justify-center items-center text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse min-h-screen  gap-5'
+        className='text-start bg-white p-5 z-[60] relative  flex  justify-center items-center text[1.2rem] md:text-[2rem] md:leading-[50px] md:flex-row flex-col-reverse   gap-5'
       >
         <div className='text-[#6F00FF] pt-[12%]'>
           +34662122660 <br /> Carrer de l’Esglesia 4-6, Barcelona.
