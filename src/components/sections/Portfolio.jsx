@@ -71,7 +71,7 @@ export default function Portfolio({ setSelectedOption, setFormOpen }) {
               <CircleX size={30} strokeWidth={1} color='lightgray' />
             )}
           </div>
-          <span>Video</span>
+          <span>Vídeo</span>
         </div>
         <div
           onClick={() => setSelectedCategory("foto")}
@@ -118,7 +118,7 @@ export default function Portfolio({ setSelectedOption, setFormOpen }) {
               <CircleX size={30} strokeWidth={1} color='lightgray' />
             )}
           </div>
-          <span>Diseno</span>
+          <span>Diseño</span>
         </div>
       </div>
       <div className=' py-20 pt-4 md:pt-10 relative  w-[80%] ms-auto'>

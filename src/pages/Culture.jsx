@@ -23,8 +23,8 @@ export default function Culture() {
   }, []);
   return (
     <div className={twMerge("flex flex-col  culture-page ")}>
-      <div className='flex flex-col gap-1 absolute top-10  left-5 md:left-10'>
-        <span className='  md:text-6xl text-xl z-20  text-[#FF3C00] w-1/4 text-left  '>
+      <div className='flex flex-col md:gap-1 absolute top-10  left-5 md:left-10'>
+        <span className='  md:text-6xl text-xl z-20  text-[#FF3C00] w-full md:w-1/4 text-left  '>
           Educación y Cultura
         </span>
         <span className='  md:text-6xl text-xl z-20  text-black w-1/4 text-left  '>

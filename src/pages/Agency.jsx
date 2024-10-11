@@ -23,8 +23,8 @@ export default function Agency() {
   }, []);
   return (
     <div className={twMerge(" flex flex-col  agency-page ")}>
-      <div className='flex flex-col gap-1 absolute top-10  left-5 md:left-10'>
-        <span className='  md:text-6xl text-xl z-20  text-[#FF3C00] w-1/4 text-left  '>
+      <div className='flex flex-col md:gap-1 absolute top-10  left-5 md:left-10'>
+        <span className='  md:text-6xl text-xl z-20  text-[#FF3C00] w-full md:w-1/4 text-left  '>
           Agencia Creativa
         </span>
         <span className='  md:text-6xl text-xl z-20  text-black w-1/4 text-left  '>
@@ -55,7 +55,7 @@ export default function Agency() {
         className='w-full h-[35vh] md:h-[45vh] sticky top-0 z-[-1] object-fill'
         alt='Section Banner'
       />
-      <div className=' h-full md:w-2/4 p-4  md:text-right flex flex-col self-end gap-2'>
+      <div className=' h-full md:w-2/4 p-4  md:text-right flex flex-col self-end gap-2 mt-10 md:mt-0'>
         <h1 className='header-text'> Vídeo, Foto y Animación </h1>
         <p className='description-text mt-2'>
           Este proyecto impulsado por el Museo Agbar de las
@@ -117,7 +117,9 @@ export default function Agency() {
               key={index}
               title={project.title}
               imgSrc={project.imgSrc}
-              titleClassname={"text-[1rem] leading-[20px] text-left"}
+              titleClassname={
+                "text-base md:text-[3rem] lg:text-[2rem]  xl:text-[4rem] 2xl:text-[6rem] leading-[20px] text-left md:leading-[55px] lg:leading-[50px] xl:leading-[70px] 2xl:leading-[110px]"
+              }
               subText={
                 <>
                   {" "}

@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/agency",
+    path: "/agencia-creativa",
     element: (
       <App>
         <Agency />
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/events",
+    path: "/agencia-de-fotografia",
     element: (
       <App>
         <Events />
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/culture",
+    path: "/direccion-de-arte",
     element: (
       <App>
         <Culture />
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/studio",
+    path: "/estudio-de-diseno-grafico",
     element: (
       <App>
         <Studio />
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/production",
+    path: "/productora-audivisual",
     element: (
       <App>
         <Production />

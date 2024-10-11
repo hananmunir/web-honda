@@ -33,7 +33,27 @@ function App({ children }) {
   const location = useLocation();
   const pathname = location.pathname;
   const navigate = useNavigate();
+  useEffect(() => {
+    let isFavicon1 = true;
 
+    // Function to switch favicon
+    const switchFavicon = () => {
+      const favicon = document.getElementById("dynamic-favicon");
+      if (favicon) {
+        favicon.href = isFavicon1
+          ? `/icons/Favicon_2.png?${new Date().getTime()}`
+          : `/icons/Favicon_1.png?${new Date().getTime()}`;
+
+        isFavicon1 = !isFavicon1; // Toggle between true and false
+      }
+    };
+
+    // Set interval to change the favicon every 2 seconds
+    const interval = setInterval(switchFavicon, 2000);
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
   const handleFocusContainer = (name) => {
     if (pathname !== "/") {
       handleRedirect("/");
@@ -141,7 +161,7 @@ function App({ children }) {
                 className='cursor-pointer'
                 onClick={() => handleFocusContainer("video")}
               >
-                Video
+                Vídeo
               </span>
               <span
                 className='cursor-pointer'
@@ -153,7 +173,7 @@ function App({ children }) {
                 className='cursor-pointer'
                 onClick={() => handleFocusContainer("grafico")}
               >
-                Grafico
+                Gráfico
               </span>
 
               <span
@@ -183,31 +203,31 @@ function App({ children }) {
             </div>
           </div>
           <MenuText
-            link={"/production"}
+            link={"/productora-audivisual"}
             text={"Producción Audiovisual"}
             pathname={pathname}
             handleRedirect={handleRedirect}
           />
           <MenuText
-            link={"/culture"}
+            link={"/direccion-de-arte"}
             text={"Educación y Cultura"}
             pathname={pathname}
             handleRedirect={handleRedirect}
           />
           <MenuText
-            link={"/agency"}
+            link={"/agencia-creativa"}
             text={"Agencia Creativa"}
             pathname={pathname}
             handleRedirect={handleRedirect}
           />
           <MenuText
-            link={"/events"}
+            link={"/agencia-de-fotografia"}
             text={"Eventos"}
             pathname={pathname}
             handleRedirect={handleRedirect}
           />
           <MenuText
-            link={"/studio"}
+            link={"/estudio-de-diseno-grafico"}
             text={"Estudio de Diseño"}
             pathname={pathname}
             handleRedirect={handleRedirect}
@@ -225,7 +245,7 @@ function App({ children }) {
           <br />
           hola@hondostudio.com
         </div>
-        <section className=' dark:bg-gray-900 md:w-3/5 px-4 '>
+        <section className=' w-full dark:bg-gray-900 md:w-3/5 px-4 '>
           <div className='w-full  flex items-end justify-end text-right '>
             <span className=' header-text   '>
               Ahora es tu turno <br /> ¡Cuéntanos algo!
