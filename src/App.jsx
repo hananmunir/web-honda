@@ -69,6 +69,9 @@ function App({ children }) {
   };
 
   const handleRedirect = (name) => {
+    if (window.innerWidth < 768) {
+      setMenuOpen(false);
+    }
     navigate(name);
   };
 
