@@ -50,6 +50,32 @@ export const portfolios = {
     pages: ["agency", "culture", "events", "production", "studio"],
     type: "video",
   },
+  "test-first": {
+    headerImage: "/images/project/testFirst/banner.jpg",
+    title: "Test First",
+    subTitle: "Fotografía web y catálogo",
+    description:
+      "Este proyecto busca promocionar la nueva etiqueta de la marca de la manera que más la caracteriza, entre amigos, parejas y sobremesas que celebran las mejores ocasiones.",
+    secBanner: "/images/project/testFirst/sec-banner.jpg",
+
+    section2: {
+      title: "Nueva botella",
+
+      description:
+        "Sangre de Toro renovó por completo el diseño de su etiqueta y la presentó en Instagram. En colaboración con la Agencia Manifiesto, sacamos a relucir el rediseño de la botella para redes sociales, web y catálogo.",
+      imgSrc: "/images/project/testFirst/section-img.jpg",
+    },
+    projectImages: [
+      "/images/project/testFirst/p-1.jpg",
+      "/images/project/testFirst/p-2.jpg",
+      "/images/project/testFirst/p-3.jpg",
+      "/images/project/testFirst/p-4.jpg",
+      "/images/project/testFirst/p-5.jpg",
+    ],
+    sections: ["foto", "video", "home", "grafico", "portfolio"],
+    pages: ["agency", "culture", "events", "production", "studio"],
+    type: "video",
+  },
   "ray-motors": {
     headerImage: "/images/project/rayMotors/banner.jpg",
     title: "Ray Motors",

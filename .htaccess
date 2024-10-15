@@ -2,6 +2,16 @@
 
   RewriteEngine On
   RewriteBase /
+
+  # Redirección de HTTP a HTTPS
+  RewriteCond %{HTTPS} on
+  RewriteRule ^(.*)$ https://www.hondostudio.com/$1 [L,R=301]
+
+  # Redirección de sin-www a www solo si está en HTTPS
+  RewriteCond %{HTTP_HOST} ^hondostudio\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.hondostudio.com/$1 [L,R=301]
+
+  # Mantener las reglas de index.html
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
