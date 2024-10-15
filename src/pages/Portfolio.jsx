@@ -17,9 +17,6 @@ export default function Project() {
     <div
       className={twMerge("portfilio-section  dm-sans  w-full flex flex-col ")}
     >
-      <span className='fixed  text-[5rem] font-normal top-10 left-10 text-6xl z-20 text-[#FF3C00] w-1/4 text-left  '>
-        Portfolio
-      </span>
       <img
         src={project.headerImage} // Dynamically set the banner image based on the section
         className='w-full h-[35vh] md:h-[45vh] sticky top-0 z-[-1] object-cover '

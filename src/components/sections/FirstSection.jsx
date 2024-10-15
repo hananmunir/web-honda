@@ -1,7 +1,7 @@
 import React from "react";
 import { PlusCircle } from "lucide-react"; // Importing an icon
 import { twMerge } from "tailwind-merge";
-import ImageCard from "../shared/imageCard";
+
 import Carousel from "../shared/Carousel";
 import { portfolios } from "../../assets/portfolios";
 export default function First({ setFormOpen }) {
@@ -33,24 +33,8 @@ export default function First({ setFormOpen }) {
           Potenciar tu marca
         </span>
       </div>
-
-      {/* "Ver Todos" section */}
-      <div className='w-full py-20 relative '>
-        <div
-          style={{ direction: "rtl" }}
-          className='  w-[80%] ml-auto z-[30] justify-items-end justify-end h-full grid grid-cols-2 grid-flow-col'
-        >
-          {projects.map((project, index) => (
-            <ImageCard
-              key={index}
-              title={project.title}
-              imgSrc={project.imgSrc}
-            />
-          ))}
-        </div>
-      </div>
-      <div>
-        <div className='w-3/5 md:w-4/5 showcase-text text-right px-3 md:px-5 ms-auto'>
+      <div className='flex gap-6 w-full justify-end  items-end md:items-start text-right flex-col-reverse md:flex-row'>
+        <div className='w-3/5 md:w-1/5 showcase-text px-3 md:px-0'>
           <span className='text-[#6F00FF]'>/</span> Producción Audiovisual{" "}
           <span className='text-[#6F00FF]'>/</span> Dirección Creativa{" "}
           <span className='text-[#6F00FF]'>/</span> Branded Content{" "}
@@ -61,6 +45,19 @@ export default function First({ setFormOpen }) {
           <span className='text-[#6F00FF]'>/</span> Diseño Gráfico{" "}
           <span className='text-[#6F00FF]'>/</span> Redes Sociales{" "}
           <span className='text-[#6F00FF]'>/</span> Story Telling
+        </div>
+        <div className='w-[70vw] md:w-[50vw] h-[250px] md:h-[50vh] self-end'>
+          <Carousel
+            images={[
+              "/images/video/1.jpg",
+              "/images/video/2.jpg",
+              "/images/video/3.jpg",
+              "/images/video/4.jpg",
+              "/images/video/5.jpg",
+              "/images/video/6.jpg",
+              "/images/video/7.jpg",
+            ]}
+          />
         </div>
       </div>
     </div>

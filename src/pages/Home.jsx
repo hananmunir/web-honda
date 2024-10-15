@@ -20,7 +20,7 @@ const images = [
   "/images/portfoliobanner.jpg",
   "/images/Header_Equipo.webp",
   "/images/Header_Paella.webp",
-  "/images/banner.png",
+  "/images/contact-banner.png",
 ];
 
 export default function Home({ setSelectedOption }) {
